@@ -1,0 +1,51 @@
+CompilationUnit 
+ClassDeclaration name= Factorial 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= NUM_FACTS 
+Literal value= 100 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= "! is " 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= factorial 
+BasicType name= int 
+FormalParameter name= n 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 1 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
