@@ -1,0 +1,54 @@
+CompilationUnit 
+ClassDeclaration name= loop 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= temp 
+Literal value= 100 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= counter 
+Literal value= 0 
+ForStatement 
+ForControl 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= " fact is " 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= fac 
+BasicType name= int 
+FormalParameter name= j 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 1 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= count 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 

@@ -1,0 +1,32 @@
+CompilationUnit 
+ClassDeclaration name= IntListTesterVer1 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= IntListVer1 
+VariableDeclarator name= list1 
+ClassCreator 
+ReferenceType name= IntListVer1 
+LocalVariableDeclaration 
+ReferenceType name= IntListVer1 
+VariableDeclarator name= list2 
+ClassCreator 
+ReferenceType name= IntListVer1 
+Literal value= 100 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1.equals(list2): " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list2: " 
+MemberReference 

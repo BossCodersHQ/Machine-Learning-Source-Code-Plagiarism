@@ -1,0 +1,38 @@
+CompilationUnit 
+ClassDeclaration name= IntListVer1 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= DEFAULT_CAP 
+Literal value= 10 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iValues 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iSize 
+ConstructorDeclaration name= IntListVer1 
+StatementExpression 
+ExplicitConstructorInvocation 
+MemberReference 
+ConstructorDeclaration name= IntListVer1 
+FormalParameter name= initialCap 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Violation of precondition. IntListVer1(int initialCap):"), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="initialCap must be greater than 0. Value of initialCap: "), operator=+), operandr=MemberReference(member=initialCap, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Violation of precondition. IntListVer1(int initialCap):" 
+Literal value= "initialCap must be greater than 0. Value of initialCap: " 
+MemberReference 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[MemberReference(member=initialCap, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=BasicType(dimensions=None, name=int)) 
+MemberReference 
+ArrayCreator 
+BasicType name= int 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 

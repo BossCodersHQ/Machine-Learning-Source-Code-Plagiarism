@@ -1,0 +1,368 @@
+CompilationUnit 
+ClassDeclaration name= IntListVer3 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= DEFAULT_CAP 
+Literal value= 10 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iValues 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iSize 
+ConstructorDeclaration name= IntListVer3 
+StatementExpression 
+ExplicitConstructorInvocation 
+MemberReference 
+ConstructorDeclaration name= IntListVer3 
+FormalParameter name= initialCap 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Violation of precondition. IntListVer1(int initialCap):"), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="initialCap must be greater than 0. Value of initialCap: "), operator=+), operandr=MemberReference(member=initialCap, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Violation of precondition. IntListVer1(int initialCap):" 
+Literal value= "initialCap must be greater than 0. Value of initialCap: " 
+MemberReference 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[MemberReference(member=initialCap, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=BasicType(dimensions=None, name=int)) 
+MemberReference 
+ArrayCreator 
+BasicType name= int 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+MethodDeclaration name= add 
+FormalParameter name= x 
+BasicType name= int 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MethodDeclaration name= get 
+BasicType name= int 
+FormalParameter name= pos 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition get. "), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="pos it out of bounds. Value of pos: "), operator=+), operandr=MemberReference(member=pos, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Failed precondition get. " 
+Literal value= "pos it out of bounds. Value of pos: " 
+MemberReference 
+ReturnStatement 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodDeclaration name= insert 
+FormalParameter name= pos 
+BasicType name= int 
+FormalParameter name= x 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition insert. "), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="pos is invalid. Value of pos: "), operator=+), operandr=MemberReference(member=pos, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Failed precondition insert. " 
+Literal value= "pos is invalid. Value of pos: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=iValues, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=BinaryOperation(operandl=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-))]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= MemberReference(member=x, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+MethodDeclaration name= remove 
+BasicType name= int 
+FormalParameter name= pos 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition remove. "), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="pos it out of bounds. Value of pos: "), operator=+), operandr=MemberReference(member=pos, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Failed precondition remove. " 
+Literal value= "pos it out of bounds. Value of pos: " 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= removedValue 
+MemberReference 
+ArraySelector 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+MemberReference 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=iValues, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=BinaryOperation(operandl=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=+))]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= ensureCapcity 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= size 
+BasicType name= int 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= resize 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= temp 
+ArrayCreator 
+BasicType name= int 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 0 
+MemberReference 
+Literal value= 0 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=temp, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= result 
+BinaryOperation 
+BinaryOperation 
+Literal value= "size: " 
+MemberReference 
+Literal value= ", elements: [" 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=iValues, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=", "), operator=+) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= ", " 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= MemberReference(member=iValues, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=BinaryOperation(operandl=MemberReference(member=iSize, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-))]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="]") 
+MemberReference 
+Literal value= "]" 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= toStringUsingStringBuffer 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= StringBuffer 
+VariableDeclarator name= result 
+ClassCreator 
+ReferenceType name= StringBuffer 
+StatementExpression 
+MethodInvocation 
+Literal value= "size: " 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= ", elements: [" 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= ", " 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+Literal value= "]" 
+ReturnStatement 
+MethodInvocation 
+MethodDeclaration name= equals 
+BasicType name= boolean 
+FormalParameter name= other 
+ReferenceType name= Object 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= result 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+IfStatement 
+BinaryOperation 
+This 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+This 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= IntListVer3 
+VariableDeclarator name= otherIntList 
+Cast 
+ReferenceType name= IntListVer3 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=This(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[MethodInvocation(arguments=[], member=size, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]), operandr=MethodInvocation(arguments=[], member=size, postfix_operators=[], prefix_operators=[], qualifier=otherIntList, selectors=[], type_arguments=None), operator===) 
+MemberReference 
+BinaryOperation 
+This 
+MethodInvocation 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+WhileStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=This(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[MemberReference(member=iValues, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None), ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]), operandr=MemberReference(member=iValues, postfix_operators=[], prefix_operators=[], qualifier=otherIntList, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]), operator===) 
+MemberReference 
+BinaryOperation 
+This 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 

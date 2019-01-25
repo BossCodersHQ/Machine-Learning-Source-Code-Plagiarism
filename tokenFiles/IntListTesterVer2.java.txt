@@ -1,0 +1,140 @@
+CompilationUnit 
+ClassDeclaration name= IntListTesterVer2 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= IntListVer2 
+VariableDeclarator name= list1 
+ClassCreator 
+ReferenceType name= IntListVer2 
+LocalVariableDeclaration 
+ReferenceType name= IntListVer2 
+VariableDeclarator name= list2 
+ClassCreator 
+ReferenceType name= IntListVer2 
+Literal value= 100 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1.equals(list2): " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list2: " 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+Literal value= 100 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=5) 
+MemberReference 
+Literal value= 5 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1.equals(list2): " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list2: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= 200 
+StatementExpression 
+MethodInvocation 
+Literal value= "Added 200 to list2." 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1.equals(list2): " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list1: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "list2: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Testing efficieny of StringBuffer versus using String." 
+StatementExpression 
+MethodInvocation 
+Literal value= "Increasing list1 size to 10000." 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= s 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=IntListVer2, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= IntListVer2 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+Literal value= 10000 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Time to build String using String class: " 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Time to build String using StringBuffer class: " 
+MethodInvocation 

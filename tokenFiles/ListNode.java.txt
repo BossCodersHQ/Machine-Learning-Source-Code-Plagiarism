@@ -1,0 +1,48 @@
+CompilationUnit 
+ClassDeclaration name= ListNode 
+FieldDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= myData 
+FieldDeclaration 
+ReferenceType name= ListNode 
+VariableDeclarator name= myNext 
+ConstructorDeclaration name= ListNode 
+StatementExpression 
+ExplicitConstructorInvocation 
+Literal value= null 
+Literal value= null 
+ConstructorDeclaration name= ListNode 
+FormalParameter name= data 
+ReferenceType name= Object 
+FormalParameter name= next 
+ReferenceType name= ListNode 
+StatementExpression 
+Assignment value= MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=next, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= getData 
+ReferenceType name= Object 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= getNext 
+ReferenceType name= ListNode 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= setData 
+FormalParameter name= data 
+ReferenceType name= Object 
+StatementExpression 
+Assignment value= MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= setNext 
+FormalParameter name= next 
+ReferenceType name= ListNode 
+StatementExpression 
+Assignment value= MemberReference(member=next, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 

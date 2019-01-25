@@ -1,0 +1,298 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= FreqTableExampleOriginal 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= NUM_ASCII_CHAR 
+Literal value= 128 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= freqs 
+MethodInvocation 
+Literal value= "http://www.utexas.edu/" 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+Literal value= "No frequency table created due to problems when reading from file" 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "charcater code: " 
+MemberReference 
+Literal value= " ,character: " 
+Cast 
+BasicType name= char 
+MemberReference 
+Literal value= " ,frequency: " 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Total characters in file: " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[None], initializer=ArrayInitializer(initializers=[]), postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=BasicType(dimensions=None, name=int)) 
+MemberReference 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+TryStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="ciaFactBook2008.txt")], member=createTable, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+Literal value= "ciaFactBook2008.txt" 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "File not found. Unable to create freq table" 
+MemberReference 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Problem while reading from file. Unable to create freq table" 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+Literal value= "No frequency table created due to problems when reading from file" 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "charcater code: " 
+MemberReference 
+Literal value= " ,character: " 
+Cast 
+BasicType name= char 
+MemberReference 
+Literal value= " ,frequency: " 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Total characters in file: " 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= sum 
+BasicType name= int 
+FormalParameter name= list 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition, sum: parameter list"), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=" may not be null."), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+BinaryOperation 
+Literal value= "Failed precondition, sum: parameter list" 
+Literal value= " may not be null." 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= x 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=x, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= createFreqTableURL 
+BasicType name= int 
+FormalParameter name= url 
+ReferenceType name= String 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+ThrowStatement 
+ClassCreator 
+ReferenceType name= IllegalArgumentException 
+Literal value= "Violation of precondition. parameter url must not be null." 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= freqs 
+ArrayCreator 
+BasicType name= int 
+MemberReference 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= URL 
+VariableDeclarator name= inputURL 
+ClassCreator 
+ReferenceType name= URL 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= InputStreamReader 
+VariableDeclarator name= in 
+ClassCreator 
+ReferenceType name= InputStreamReader 
+MethodInvocation 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Non ASCII char: " 
+MemberReference 
+Literal value= " " 
+Cast 
+BasicType name= char 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+Literal value= "Bad URL." 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0)], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=BasicType(dimensions=None, name=int)) 
+MemberReference 
+ArrayCreator 
+BasicType name= int 
+Literal value= 0 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Unable to read from resource." 
+MemberReference 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0)], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=BasicType(dimensions=None, name=int)) 
+MemberReference 
+ArrayCreator 
+BasicType name= int 
+Literal value= 0 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= createTable 
+BasicType name= int 
+FormalParameter name= fileName 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= freqs 
+ArrayCreator 
+BasicType name= int 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= File 
+VariableDeclarator name= f 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= FileReader 
+VariableDeclarator name= r 
+ClassCreator 
+ReferenceType name= FileReader 
+MemberReference 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= ch 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Cast 
+BasicType name= char 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+MemberReference 

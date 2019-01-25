@@ -1,0 +1,8 @@
+--For Variables
+
+print(getattr(getattr(node,'type'),'name'))
+//gets the type of variable declared
+
+
+print(getattr(getattr(node,'declarators')[0],'name'))
+//gets the name of the variable declared

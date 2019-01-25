@@ -1,0 +1,132 @@
+CompilationUnit 
+ClassDeclaration name= PrimitiveParameters 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= go 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= x 
+Literal value= 3 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= y 
+Literal value= 2 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method go. x: " 
+MemberReference 
+Literal value= " y: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method go. x: " 
+MemberReference 
+Literal value= " y: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method go. x: " 
+MemberReference 
+Literal value= " y: " 
+MemberReference 
+MethodDeclaration name= falseSwap 
+FormalParameter name= x 
+BasicType name= int 
+FormalParameter name= y 
+BasicType name= int 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method falseSwap. x: " 
+MemberReference 
+Literal value= " y: " 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= temp 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=y, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=temp, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method falseSwap. x: " 
+MemberReference 
+Literal value= " y: " 
+MemberReference 
+MethodDeclaration name= moreParameters 
+FormalParameter name= a 
+BasicType name= int 
+FormalParameter name= b 
+BasicType name= int 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method moreParameters. a: " 
+MemberReference 
+Literal value= " b: " 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=a, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=MemberReference(member=b, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=*) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=12) 
+MemberReference 
+Literal value= 12 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method moreParameters. a: " 
+MemberReference 
+Literal value= " b: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "in method moreParameters. a: " 
+MemberReference 
+Literal value= " b: " 
+MemberReference 

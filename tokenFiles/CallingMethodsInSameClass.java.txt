@@ -1,0 +1,20 @@
+CompilationUnit 
+ClassDeclaration name= CallingMethodsInSameClass 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= printOne 
+StatementExpression 
+MethodInvocation 
+Literal value= "Hello World" 
+MethodDeclaration name= printTwo 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 

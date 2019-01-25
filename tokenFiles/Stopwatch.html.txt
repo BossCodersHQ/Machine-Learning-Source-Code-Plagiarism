@@ -1,0 +1,35 @@
+CompilationUnit 
+ClassDeclaration name= SortedIntList 
+ConstructorDeclaration name= SortedIntList 
+FormalParameter name= initialCap 
+BasicType name= int 
+StatementExpression 
+SuperConstructorInvocation 
+MemberReference 
+ConstructorDeclaration name= SortedIntList 
+StatementExpression 
+SuperConstructorInvocation 
+MethodDeclaration name= add 
+FormalParameter name= value 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= pos 
+Literal value= 0 
+WhileStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MemberReference 
+StatementExpression 
+SuperMethodInvocation 
+MemberReference 
+MemberReference 
+ReferenceType name= IntListVer3 

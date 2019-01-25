@@ -1,0 +1,309 @@
+CompilationUnit 
+Import 
+ClassDeclaration name= Life 
+MethodDeclaration name= show 
+FormalParameter name= grid 
+BasicType name= boolean 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s 
+Literal value= "" 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= row 
+MemberReference 
+BlockStatement 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= val 
+MemberReference 
+IfStatement 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="*") 
+MemberReference 
+Literal value= "*" 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=".") 
+MemberReference 
+Literal value= "." 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="\n") 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= gen 
+BasicType name= boolean 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= grid 
+ArrayCreator 
+BasicType name= boolean 
+Literal value= 10 
+Literal value= 10 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= r 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+Literal value= 10 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+Literal value= 10 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+Literal value= 0.7 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= true 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= world 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=world, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=nextGen, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= s 
+ClassCreator 
+ReferenceType name= Scanner 
+MemberReference 
+WhileStatement 
+BinaryOperation 
+MethodInvocation 
+MethodInvocation 
+Literal value= 0 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=world, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=nextGen, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= nextGen 
+BasicType name= boolean 
+FormalParameter name= world 
+BasicType name= boolean 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= newWorld 
+ArrayCreator 
+BasicType name= boolean 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= num 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= r 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=world, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=r, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=numNeighbors, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+IfStatement 
+MethodInvocation 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= true 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= occupiedNext 
+BasicType name= boolean 
+FormalParameter name= numNeighbors 
+BasicType name= int 
+FormalParameter name= occupied 
+BasicType name= boolean 
+IfStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+Literal value= 3 
+ReturnStatement 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 3 
+ReturnStatement 
+Literal value= true 
+ReturnStatement 
+Literal value= false 
+MethodDeclaration name= numNeighbors 
+BasicType name= int 
+FormalParameter name= world 
+BasicType name= boolean 
+FormalParameter name= row 
+BasicType name= int 
+FormalParameter name= col 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= num 
+TernaryExpression 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= 1 
+Literal value= 0 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= r 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= inbounds 
+BasicType name= boolean 
+FormalParameter name= world 
+BasicType name= boolean 
+FormalParameter name= r 
+BasicType name= int 
+FormalParameter name= c 
+BasicType name= int 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 

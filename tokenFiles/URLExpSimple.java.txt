@@ -1,0 +1,51 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= URLExpSimple 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= URL 
+VariableDeclarator name= mySite 
+ClassCreator 
+ReferenceType name= URL 
+Literal value= "http://www.cs.utexas.edu/~scottm" 
+LocalVariableDeclaration 
+ReferenceType name= URLConnection 
+VariableDeclarator name= yc 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= in 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= InputStreamReader 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= count 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Number of tokens: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 

@@ -1,0 +1,82 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= SimpleWordCounter 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= File 
+VariableDeclarator name= f 
+ClassCreator 
+ReferenceType name= File 
+Literal value= "ciaFactBook2008.txt" 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= sc 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[MemberReference(member=f, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Scanner, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= Scanner 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Map 
+TypeArgument 
+ReferenceType name= String 
+TypeArgument 
+ReferenceType name= Integer 
+VariableDeclarator name= wordCount 
+ClassCreator 
+ReferenceType name= TreeMap 
+TypeArgument 
+ReferenceType name= String 
+TypeArgument 
+ReferenceType name= Integer 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= word 
+MethodInvocation 
+IfStatement 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+Literal value= 1 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= word 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= " " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+Literal value= "Unable to read from file." 

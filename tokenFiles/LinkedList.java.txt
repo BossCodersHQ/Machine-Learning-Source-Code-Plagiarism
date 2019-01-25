@@ -1,0 +1,364 @@
+CompilationUnit 
+PackageDeclaration name= Fall0811 
+Import 
+Import 
+ClassDeclaration name= LinkedList 
+FieldDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= head 
+FieldDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= tail 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= size 
+MethodDeclaration name= iterator 
+ReferenceType name= Iterator 
+ReturnStatement 
+ClassCreator 
+ReferenceType name= LLIterator 
+ClassDeclaration name= LLIterator 
+FieldDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= nextNode 
+FieldDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= removeOK 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= posToRemove 
+ConstructorDeclaration name= LLIterator 
+StatementExpression 
+Assignment value= MemberReference(member=head, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=['-'], qualifier=None, selectors=[], value=1) 
+MemberReference 
+Literal value= 1 
+MethodDeclaration name= hasNext 
+BasicType name= boolean 
+ReturnStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+MethodDeclaration name= next 
+ReferenceType name= Object 
+AssertStatement value= None 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= result 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=nextNode, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+Literal value= true 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= remove 
+AssertStatement value= None 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+StatementExpression 
+This 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MemberReference 
+ReferenceType name= Iterator 
+MethodDeclaration name= makeEmpty 
+StatementExpression 
+Assignment value= Assignment(expressionl=MemberReference(member=tail, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), type==, value=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=null)) 
+MemberReference 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=null) 
+MemberReference 
+Literal value= null 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+MethodDeclaration name= remove 
+ReferenceType name= Object 
+FormalParameter name= pos 
+BasicType name= int 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= result 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getData, postfix_operators=[], prefix_operators=[], qualifier=head, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=head, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=null) 
+MemberReference 
+Literal value= null 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= temp 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[MethodInvocation(arguments=[], member=getData, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= MemberReference(member=temp, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= get 
+ReferenceType name= Object 
+FormalParameter name= pos 
+BasicType name= int 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= result 
+IfStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getData, postfix_operators=[], prefix_operators=[], qualifier=tail, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= temp 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getData, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= insert 
+FormalParameter name= pos 
+BasicType name= int 
+FormalParameter name= obj 
+ReferenceType name= Object 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= temp 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= newNode 
+ClassCreator 
+ReferenceType name= Node 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MemberReference 
+MethodDeclaration name= add 
+FormalParameter name= obj 
+ReferenceType name= Object 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= newNode 
+ClassCreator 
+ReferenceType name= Node 
+MemberReference 
+Literal value= null 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= MemberReference(member=newNode, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=newNode, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+MethodDeclaration name= addFirst 
+FormalParameter name= obj 
+ReferenceType name= Object 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= newNode 
+ClassCreator 
+ReferenceType name= Node 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=newNode, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= result 
+Literal value= "" 
+LocalVariableDeclaration 
+ReferenceType name= Node 
+VariableDeclarator name= temp 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MethodInvocation(arguments=[], member=getData, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=" "), operator=+) 
+MemberReference 
+BinaryOperation 
+MethodInvocation 
+Literal value= " " 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getNext, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+ReferenceType name= Iterable 

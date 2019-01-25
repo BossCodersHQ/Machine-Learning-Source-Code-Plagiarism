@@ -1,0 +1,330 @@
+CompilationUnit 
+ClassDeclaration name= RecursionExampleDirectory 
+MethodDeclaration name= getSize 
+BasicType name= int 
+FormalParameter name= dir 
+ReferenceType name= Directory 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+LocalVariableDeclaration 
+ReferenceType name= File 
+VariableDeclarator name= files 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=files, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MethodInvocation(arguments=[], member=getSize, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Directory 
+VariableDeclarator name= subs 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=subs, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))])], member=getSize, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= RecursionExampleDirectory 
+VariableDeclarator name= r 
+ClassCreator 
+ReferenceType name= RecursionExampleDirectory 
+LocalVariableDeclaration 
+ReferenceType name= Directory 
+VariableDeclarator name= d 
+ClassCreator 
+ReferenceType name= Directory 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= fact 
+BasicType name= int 
+FormalParameter name= n 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 0 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1) 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=n, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=MethodInvocation(arguments=[BinaryOperation(operandl=MemberReference(member=n, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-)], member=fact, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None), operator=*) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= pow 
+BasicType name= int 
+FormalParameter name= base 
+BasicType name= int 
+FormalParameter name= exp 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 0 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1) 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=base, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=MethodInvocation(arguments=[MemberReference(member=base, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), BinaryOperation(operandl=MemberReference(member=exp, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-)], member=pow, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None), operator=*) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= fib 
+BasicType name= int 
+FormalParameter name= n 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 0 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1) 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MethodInvocation(arguments=[BinaryOperation(operandl=MemberReference(member=n, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-)], member=fib, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None), operandr=MethodInvocation(arguments=[BinaryOperation(operandl=MemberReference(member=n, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2), operator=-)], member=fib, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None), operator=+) 
+MemberReference 
+BinaryOperation 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= minWasted 
+BasicType name= int 
+FormalParameter name= items 
+BasicType name= int 
+FormalParameter name= itemNum 
+BasicType name= int 
+FormalParameter name= capLeft 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 0 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=capLeft, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+BlockStatement 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= minWithout 
+MethodInvocation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= minWith 
+MethodInvocation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=minWith, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=minWithout, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=min, postfix_operators=[], prefix_operators=[], qualifier=Math, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=minWithout, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+ClassDeclaration name= Directory 
+FieldDeclaration 
+ReferenceType name= Directory 
+VariableDeclarator name= mySubs 
+FieldDeclaration 
+ReferenceType name= File 
+VariableDeclarator name= myFiles 
+ConstructorDeclaration name= Directory 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numSubs 
+Cast 
+BasicType name= int 
+BinaryOperation 
+MethodInvocation 
+Literal value= 3 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[MemberReference(member=numSubs, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Directory, sub_type=None)) 
+MemberReference 
+ArrayCreator 
+ReferenceType name= Directory 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numFiles 
+Cast 
+BasicType name= int 
+BinaryOperation 
+MethodInvocation 
+Literal value= 10 
+StatementExpression 
+Assignment value= ArrayCreator(dimensions=[MemberReference(member=numFiles, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=File, sub_type=None)) 
+MemberReference 
+ArrayCreator 
+ReferenceType name= File 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[Cast(expression=BinaryOperation(operandl=MethodInvocation(arguments=[], member=random, postfix_operators=[], prefix_operators=[], qualifier=Math, selectors=[], type_arguments=None), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1000), operator=*), type=BasicType(dimensions=[], name=int))], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=File, sub_type=None)) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ClassCreator 
+ReferenceType name= File 
+Cast 
+BasicType name= int 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1000 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Directory, sub_type=None)) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ClassCreator 
+ReferenceType name= Directory 
+MethodDeclaration name= getSubs 
+ReferenceType name= Directory 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= getFiles 
+ReferenceType name= File 
+ReturnStatement 
+MemberReference 
+ClassDeclaration name= File 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iMySize 
+ConstructorDeclaration name= File 
+FormalParameter name= size 
+BasicType name= int 
+StatementExpression 
+Assignment value= MemberReference(member=size, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= getSize 
+BasicType name= int 
+ReturnStatement 
+MemberReference 

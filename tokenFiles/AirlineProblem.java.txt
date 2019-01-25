@@ -1,0 +1,331 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= AirlineProblem 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= scannerToReadAirlines 
+Literal value= null 
+TryStatement 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[ClassCreator(arguments=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="airlines.txt")], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=File, sub_type=None))], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Scanner, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+Literal value= "airlines.txt" 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+Literal value= "Could not connect to file airlines.txt." 
+StatementExpression 
+MethodInvocation 
+Literal value= 0 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= Airline 
+VariableDeclarator name= airlinesPartnersNetwork 
+ClassCreator 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= Airline 
+LocalVariableDeclaration 
+ReferenceType name= Airline 
+VariableDeclarator name= newAirline 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= lineFromFile 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= airlineNames 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=nextLine, postfix_operators=[], prefix_operators=[], qualifier=scannerToReadAirlines, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=",")], member=split, postfix_operators=[], prefix_operators=[], qualifier=lineFromFile, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+Literal value= "," 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[MemberReference(member=airlineNames, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Airline, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= Airline 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= keyboard 
+ClassCreator 
+ReferenceType name= Scanner 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Enter airline miles are on: " 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= start 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+Literal value= "Enter goal airline: " 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= goal 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= pathForMiles 
+ClassCreator 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= airlinesVisited 
+ClassCreator 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+IfStatement 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Path to redeem miles: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Cannot convert miles from " 
+MemberReference 
+Literal value= " to " 
+MemberReference 
+Literal value= "." 
+MethodDeclaration name= canRedeem 
+BasicType name= boolean 
+FormalParameter name= current 
+ReferenceType name= String 
+FormalParameter name= goal 
+ReferenceType name= String 
+FormalParameter name= pathForMiles 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+FormalParameter name= airlinesVisited 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+FormalParameter name= network 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= Airline 
+IfStatement 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+ReturnStatement 
+Literal value= true 
+IfStatement 
+MethodInvocation 
+MemberReference 
+ReturnStatement 
+Literal value= false 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= pos 
+Literal value= 1 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= index 
+Literal value= 0 
+WhileStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BlockStatement 
+IfStatement 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=index, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+ReturnStatement 
+Literal value= false 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= partners 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= foundPath 
+Literal value= false 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=partners, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=index, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]), MemberReference(member=goal, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=pathForMiles, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=airlinesVisited, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=network, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=canRedeem, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+IfStatement 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1 
+ReturnStatement 
+MemberReference 
+ClassDeclaration name= Airline 
+FieldDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= name 
+FieldDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= partners 
+ConstructorDeclaration name= Airline 
+FormalParameter name= data 
+ReferenceType name= String 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition") 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+Literal value= "Failed precondition" 
+StatementExpression 
+Assignment value= MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0))]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=[TypeArgument(pattern_type=None, type=ReferenceType(arguments=None, dimensions=[], name=String, sub_type=None))], dimensions=None, name=ArrayList, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodDeclaration name= getPartners 
+ReferenceType name= String 
+ReturnStatement 
+MethodInvocation 
+ArrayCreator 
+ReferenceType name= String 
+MethodInvocation 
+MethodDeclaration name= isPartner 
+BasicType name= boolean 
+FormalParameter name= name 
+ReferenceType name= String 
+ReturnStatement 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= getName 
+ReferenceType name= String 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= ", partners: " 
+MemberReference 

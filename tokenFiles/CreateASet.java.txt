@@ -1,0 +1,227 @@
+CompilationUnit 
+Import 
+Import 
+ClassDeclaration name= CreateASet 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= words 
+ArrayInitializer 
+Literal value= "A" 
+Literal value= "B" 
+Literal value= "B" 
+Literal value= "D" 
+Literal value= "C" 
+Literal value= "A" 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "original: " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "as a set: " 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Rectangle 
+VariableDeclarator name= rectList 
+ArrayInitializer 
+ClassCreator 
+ReferenceType name= Rectangle 
+ClassCreator 
+ReferenceType name= Rectangle 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= 0 
+Literal value= 1 
+Literal value= 2 
+Literal value= 3 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= 0 
+Literal value= 1 
+Literal value= 2 
+Literal value= 3 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "original: " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "as a set: " 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= mixed 
+ArrayInitializer 
+Literal value= "A" 
+Literal value= "C" 
+Literal value= "A" 
+Literal value= "B" 
+ClassCreator 
+ReferenceType name= Rectangle 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= "A" 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= 0 
+Literal value= 1 
+Literal value= 2 
+Literal value= 3 
+Literal value= "D" 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "original: " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "as a set: " 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= makeSet 
+ReferenceType name= Object 
+FormalParameter name= data 
+ReferenceType name= Object 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition makeSet. parameter cannot be null") 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+Literal value= "Failed precondition makeSet. parameter cannot be null" 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition makeSet. no elements of parameter can be null") 
+MethodInvocation 
+MemberReference 
+Literal value= "Failed precondition makeSet. no elements of parameter can be null" 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= result 
+ArrayCreator 
+ReferenceType name= Object 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numUnique 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= found 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= indexInResult 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MethodInvocation(arguments=[MemberReference(member=result, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=indexInResult, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))])], member=equals, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MemberReference 
+IfStatement 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Object 
+VariableDeclarator name= result2 
+ArrayCreator 
+ReferenceType name= Object 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 0 
+MemberReference 
+Literal value= 0 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= noNulls 
+BasicType name= boolean 
+FormalParameter name= data 
+ReferenceType name= Object 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition makeSet. parameter cannot be null") 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+Literal value= "Failed precondition makeSet. parameter cannot be null" 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= good 
+Literal value= true 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=data, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=null), operator=!=) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= null 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 

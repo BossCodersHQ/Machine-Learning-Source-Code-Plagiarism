@@ -1,0 +1,48 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= WriteToFile 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= PrintStream 
+VariableDeclarator name= writer 
+ClassCreator 
+ReferenceType name= PrintStream 
+ClassCreator 
+ReferenceType name= File 
+Literal value= "randInts.txt" 
+LocalVariableDeclaration 
+ReferenceType name= Random 
+VariableDeclarator name= r 
+ClassCreator 
+ReferenceType name= Random 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= LIMIT 
+Literal value= 100 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+Literal value= "An error occured while trying to write to the file" 

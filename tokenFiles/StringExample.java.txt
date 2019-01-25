@@ -1,0 +1,111 @@
+CompilationUnit 
+ClassDeclaration name= StringExample 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s1 
+Literal value= "Computer Science" 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= x 
+Literal value= 307 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s2 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= " " 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s3 
+MethodInvocation 
+Literal value= 10 
+Literal value= 17 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s4 
+Literal value= "is fun" 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s5 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s1: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s2: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s3: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s4: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s5: " 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=3) 
+MemberReference 
+Literal value= 3 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= y 
+Literal value= 5 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s6 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+Literal value= "total" 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s7 
+BinaryOperation 
+BinaryOperation 
+Literal value= "total " 
+MemberReference 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s8 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= " " 
+MemberReference 
+MemberReference 
+Literal value= "total" 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s6: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s7: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "s8: " 
+MemberReference 

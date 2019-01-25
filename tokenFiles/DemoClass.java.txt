@@ -1,0 +1,130 @@
+CompilationUnit 
+ClassDeclaration name= DemoClass 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= x 
+ConstructorDeclaration name= DemoClass 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+ConstructorDeclaration name= DemoClass 
+FormalParameter name= x 
+BasicType name= int 
+StatementExpression 
+Assignment value= MemberReference(member=x, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+This 
+MemberReference 
+MemberReference 
+ConstructorDeclaration name= DemoClass 
+FormalParameter name= otherDemo 
+ReferenceType name= DemoClass 
+StatementExpression 
+Assignment value= MemberReference(member=x, postfix_operators=[], prefix_operators=[], qualifier=otherDemo, selectors=[]) 
+This 
+MemberReference 
+MemberReference 
+MethodDeclaration name= s1 
+ReturnStatement 
+MethodDeclaration name= i1 
+ReturnStatement 
+MethodDeclaration name= s2 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+MethodDeclaration name= i2 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+MethodDeclaration name= overloadTester 
+StatementExpression 
+MethodInvocation 
+Literal value= "overloadTester:\n" 
+StatementExpression 
+MethodInvocation 
+Cast 
+BasicType name= byte 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+Cast 
+BasicType name= short 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+Literal value= 1L 
+StatementExpression 
+MethodInvocation 
+Literal value= 1.0f 
+StatementExpression 
+MethodInvocation 
+Literal value= 1.0 
+StatementExpression 
+MethodInvocation 
+Literal value= '1' 
+StatementExpression 
+MethodInvocation 
+Literal value= true 
+MethodDeclaration name= overload 
+FormalParameter name= b 
+BasicType name= byte 
+StatementExpression 
+MethodInvocation 
+Literal value= "byte" 
+MethodDeclaration name= overload 
+FormalParameter name= s 
+BasicType name= short 
+StatementExpression 
+MethodInvocation 
+Literal value= "short" 
+MethodDeclaration name= overload 
+FormalParameter name= i 
+BasicType name= int 
+StatementExpression 
+MethodInvocation 
+Literal value= "int" 
+MethodDeclaration name= overload 
+FormalParameter name= l 
+BasicType name= long 
+StatementExpression 
+MethodInvocation 
+Literal value= "long" 
+MethodDeclaration name= overload 
+FormalParameter name= f 
+BasicType name= float 
+StatementExpression 
+MethodInvocation 
+Literal value= "float" 
+MethodDeclaration name= overload 
+FormalParameter name= d 
+BasicType name= double 
+StatementExpression 
+MethodInvocation 
+Literal value= "double" 
+MethodDeclaration name= overload 
+FormalParameter name= c 
+BasicType name= char 
+StatementExpression 
+MethodInvocation 
+Literal value= "char" 
+MethodDeclaration name= overload 
+FormalParameter name= b 
+BasicType name= boolean 
+StatementExpression 
+MethodInvocation 
+Literal value= "boolean" 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= DemoClass 
+VariableDeclarator name= dc 
+ClassCreator 
+ReferenceType name= DemoClass 
+StatementExpression 
+MethodInvocation 

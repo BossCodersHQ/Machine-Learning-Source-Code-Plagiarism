@@ -1,0 +1,345 @@
+CompilationUnit 
+Import 
+Import 
+ClassDeclaration name= PrimeEx 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+Literal value= 10 
+Literal value= 4 
+StatementExpression 
+MethodInvocation 
+Literal value= 2 
+Literal value= 2 
+StatementExpression 
+MethodInvocation 
+Literal value= 54161329 
+Literal value= 4 
+StatementExpression 
+MethodInvocation 
+Literal value= 1882341361 
+Literal value= 2 
+StatementExpression 
+MethodInvocation 
+Literal value= 36 
+Literal value= 9 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 54161329 
+Literal value= " expect false" 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1882341361 
+Literal value= " expect true" 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 2 
+Literal value= " expect true" 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numPrimes 
+Literal value= 0 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= s 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+Literal value= 10000000 
+MemberReference 
+BlockStatement 
+IfStatement 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= " " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= primes 
+MethodInvocation 
+Literal value= 10000000 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= np 
+Literal value= 0 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= b 
+MemberReference 
+IfStatement 
+MemberReference 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= " " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ClassCreator 
+ReferenceType name= BigInteger 
+Literal value= 1024 
+Literal value= 10 
+ClassCreator 
+ReferenceType name= Random 
+MethodDeclaration name= getPrimes 
+BasicType name= boolean 
+FormalParameter name= max 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= result 
+ArrayCreator 
+BasicType name= boolean 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= true 
+LocalVariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= LIMIT 
+MethodInvocation 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 2 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+IfStatement 
+MemberReference 
+ArraySelector 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= index 
+BinaryOperation 
+Literal value= 2 
+MemberReference 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= false 
+StatementExpression 
+Assignment value= MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= printTest 
+FormalParameter name= num 
+BasicType name= int 
+FormalParameter name= expectedFactors 
+BasicType name= int 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= actualFactors 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Testing " 
+MemberReference 
+Literal value= " expect " 
+MemberReference 
+Literal value= ", " 
+Literal value= "actual " 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "PASSED" 
+StatementExpression 
+MethodInvocation 
+Literal value= "FAILED" 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MethodDeclaration name= isPrime 
+BasicType name= boolean 
+FormalParameter name= num 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="failed precondition. num must be >= 2. num: "), operandr=MemberReference(member=num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+BinaryOperation 
+Literal value= "failed precondition. num must be >= 2. num: " 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= LIMIT 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= isPrime 
+TernaryExpression 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+Literal value= true 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= div 
+Literal value= 3 
+WhileStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=BinaryOperation(operandl=MemberReference(member=num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=MemberReference(member=div, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=%), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0), operator=!=) 
+MemberReference 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2) 
+MemberReference 
+Literal value= 2 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= numFactors 
+BasicType name= int 
+FormalParameter name= num 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="failed precondition. num must be >= 2. num: "), operandr=MemberReference(member=num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+BinaryOperation 
+Literal value= "failed precondition. num must be >= 2. num: " 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= SQRT 
+MethodInvocation 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+Literal value= 0 
+BlockStatement 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2) 
+MemberReference 
+Literal value= 2 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 

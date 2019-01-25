@@ -1,0 +1,147 @@
+CompilationUnit 
+ClassDeclaration name= BinaryConverter 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 5 
+BinaryOperation 
+MemberReference 
+Literal value= 33 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= ": " 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= ": " 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= toBinary 
+ReferenceType name= String 
+FormalParameter name= base10Num 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= isNeg 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=base10Num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=abs, postfix_operators=[], prefix_operators=[], qualifier=Math, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= result 
+Literal value= "" 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=BinaryOperation(operandl=MemberReference(member=base10Num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2), operator=%), operandr=MemberReference(member=result, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+MemberReference 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2) 
+MemberReference 
+Literal value= 2 
+AssertStatement value= BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="value is not <= 1: "), operandr=MemberReference(member=base10Num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+Literal value= "value is not <= 1: " 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=base10Num, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=MemberReference(member=result, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+AssertStatement value= None 
+MethodInvocation 
+MemberReference 
+IfStatement 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="-"), operandr=MemberReference(member=result, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+) 
+MemberReference 
+BinaryOperation 
+Literal value= "-" 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= all0sAnd1s 
+BasicType name= boolean 
+FormalParameter name= val 
+ReferenceType name= String 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Failed precondition all0sAnd1s. parameter cannot be null") 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+Literal value= "Failed precondition all0sAnd1s. parameter cannot be null" 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= all 
+Literal value= true 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= char 
+VariableDeclarator name= c 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=charAt, postfix_operators=[], prefix_operators=[], qualifier=val, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=BinaryOperation(operandl=MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value='0'), operator===), operandr=BinaryOperation(operandl=MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value='1'), operator===), operator=||) 
+MemberReference 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= '0' 
+BinaryOperation 
+MemberReference 
+Literal value= '1' 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 

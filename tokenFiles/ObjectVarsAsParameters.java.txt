@@ -1,0 +1,103 @@
+CompilationUnit 
+Import 
+ClassDeclaration name= ObjectVarsAsParameters 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= go 
+LocalVariableDeclaration 
+ReferenceType name= Rectangle 
+VariableDeclarator name= r1 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= 0 
+Literal value= 0 
+Literal value= 5 
+Literal value= 5 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method go. r1 " 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+MethodInvocation 
+Literal value= 10 
+Literal value= 15 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method go. r1 " 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method go. r1 " 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method go. r1 " 
+MemberReference 
+Literal value= "\n" 
+MethodDeclaration name= alterPointee 
+FormalParameter name= r 
+ReferenceType name= Rectangle 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method alterPointee. r " 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+MethodInvocation 
+Literal value= 20 
+Literal value= 30 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method alterPointee. r " 
+MemberReference 
+Literal value= "\n" 
+MethodDeclaration name= alterPointer 
+FormalParameter name= r 
+ReferenceType name= Rectangle 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method alterPointer. r " 
+MemberReference 
+Literal value= "\n" 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=5), Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=10), Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=30), Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=35)], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Rectangle, sub_type=None)) 
+MemberReference 
+ClassCreator 
+ReferenceType name= Rectangle 
+Literal value= 5 
+Literal value= 10 
+Literal value= 30 
+Literal value= 35 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "In method alterPointer. r " 
+MemberReference 
+Literal value= "\n" 

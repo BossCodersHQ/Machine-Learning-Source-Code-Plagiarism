@@ -1,0 +1,147 @@
+CompilationUnit 
+Import 
+Import 
+ClassDeclaration name= UnsortedHashSet 
+FieldDeclaration 
+BasicType name= double 
+VariableDeclarator name= LOAD_FACTOR_LIMIT 
+Literal value= 0.7 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= size 
+FieldDeclaration 
+ReferenceType name= LinkedList 
+TypeArgument 
+ReferenceType name= E 
+VariableDeclarator name= con 
+ConstructorDeclaration name= UnsortedHashSet 
+StatementExpression 
+Assignment value= Cast(expression=ArrayCreator(dimensions=[Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=10)], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=LinkedList, sub_type=None)), type=ReferenceType(arguments=[TypeArgument(pattern_type=None, type=ReferenceType(arguments=None, dimensions=[], name=E, sub_type=None))], dimensions=[None], name=LinkedList, sub_type=None)) 
+MemberReference 
+Cast 
+ReferenceType name= LinkedList 
+TypeArgument 
+ReferenceType name= E 
+ArrayCreator 
+ReferenceType name= LinkedList 
+Literal value= 10 
+MethodDeclaration name= add 
+BasicType name= boolean 
+FormalParameter name= obj 
+ReferenceType name= E 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= oldSize 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= index 
+BinaryOperation 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= null 
+StatementExpression 
+Assignment value= ClassCreator(arguments=[], body=None, constructor_type_arguments=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=[TypeArgument(pattern_type=None, type=ReferenceType(arguments=None, dimensions=[], name=E, sub_type=None))], dimensions=None, name=LinkedList, sub_type=None)) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ClassCreator 
+ReferenceType name= LinkedList 
+TypeArgument 
+ReferenceType name= E 
+IfStatement 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MemberReference 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= 1.0 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MethodDeclaration name= resize 
+LocalVariableDeclaration 
+ReferenceType name= UnsortedHashSet 
+TypeArgument 
+ReferenceType name= E 
+VariableDeclarator name= temp 
+ClassCreator 
+ReferenceType name= UnsortedHashSet 
+TypeArgument 
+ReferenceType name= E 
+StatementExpression 
+Assignment value= Cast(expression=ArrayCreator(dimensions=[BinaryOperation(operandl=BinaryOperation(operandl=MemberReference(member=length, postfix_operators=[], prefix_operators=[], qualifier=con, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=2), operator=*), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=+)], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=LinkedList, sub_type=None)), type=ReferenceType(arguments=[TypeArgument(pattern_type=None, type=ReferenceType(arguments=None, dimensions=[], name=E, sub_type=None))], dimensions=[None], name=LinkedList, sub_type=None)) 
+MemberReference 
+Cast 
+ReferenceType name= LinkedList 
+TypeArgument 
+ReferenceType name= E 
+ArrayCreator 
+ReferenceType name= LinkedList 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+Literal value= 1 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+IfStatement 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= null 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+ReferenceType name= E 
+VariableDeclarator name= e 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=con, postfix_operators=[], prefix_operators=[], qualifier=temp, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= size 
+BasicType name= int 
+ReturnStatement 
+MemberReference 
+TypeParameter name= E 

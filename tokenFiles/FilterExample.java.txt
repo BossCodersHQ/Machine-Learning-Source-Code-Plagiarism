@@ -1,0 +1,254 @@
+CompilationUnit 
+Import 
+ClassDeclaration name= FilterExample 
+MethodDeclaration name= smooth 
+ReferenceType name= Color 
+FormalParameter name= image 
+ReferenceType name= Color 
+FormalParameter name= neighberhoodSize 
+BasicType name= int 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Violation of precondition: smooth") 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+MethodInvocation 
+MemberReference 
+Literal value= "Violation of precondition: smooth" 
+LocalVariableDeclaration 
+ReferenceType name= Color 
+VariableDeclarator name= result 
+ArrayCreator 
+ReferenceType name= Color 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= row 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= col 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[MemberReference(member=image, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=row, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=col, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), MemberReference(member=neighberhoodSize, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=aveOfNeighbors, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[], type_arguments=None) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= aveOfNeighbors 
+ReferenceType name= Color 
+FormalParameter name= image 
+ReferenceType name= Color 
+FormalParameter name= row 
+BasicType name= int 
+FormalParameter name= col 
+BasicType name= int 
+FormalParameter name= neighberhoodSize 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numNeighbors 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= red 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= green 
+Literal value= 0 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= blue 
+Literal value= 0 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= r 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+IfStatement 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=image, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=r, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), ArraySelector(index=MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MethodInvocation(arguments=[], member=getRed, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MemberReference(member=image, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=r, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), ArraySelector(index=MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MethodInvocation(arguments=[], member=getGreen, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+Assignment value= MemberReference(member=image, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=r, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), ArraySelector(index=MemberReference(member=c, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MethodInvocation(arguments=[], member=getBlue, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None, type_arguments=None)]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+ReturnStatement 
+ClassCreator 
+ReferenceType name= Color 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MethodDeclaration name= inBounds 
+BasicType name= boolean 
+FormalParameter name= image 
+ReferenceType name= Color 
+FormalParameter name= row 
+BasicType name= int 
+FormalParameter name= col 
+BasicType name= int 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+MethodDeclaration name= rectangularMatrix 
+BasicType name= boolean 
+FormalParameter name= mat 
+ReferenceType name= Color 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= isRectangular 
+Literal value= true 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= row 
+Literal value= 1 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= COLUMNS 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 
+WhileStatement 
+BinaryOperation 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=mat, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=row, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])), MemberReference(member=length, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None)]), operandr=MemberReference(member=COLUMNS, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator===) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 

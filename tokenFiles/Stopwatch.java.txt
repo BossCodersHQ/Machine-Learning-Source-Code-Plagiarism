@@ -1,0 +1,44 @@
+CompilationUnit 
+ClassDeclaration name= Stopwatch 
+FieldDeclaration 
+BasicType name= long 
+VariableDeclarator name= startTime 
+FieldDeclaration 
+BasicType name= long 
+VariableDeclarator name= stopTime 
+FieldDeclaration 
+BasicType name= double 
+VariableDeclarator name= NANOS_PER_SEC 
+Literal value= 1000000000.0 
+MethodDeclaration name= start 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=nanoTime, postfix_operators=[], prefix_operators=[], qualifier=System, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= stop 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=nanoTime, postfix_operators=[], prefix_operators=[], qualifier=System, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= time 
+BasicType name= double 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+Literal value= "elapsed time: " 
+MethodInvocation 
+Literal value= " seconds." 
+MethodDeclaration name= timeInNanoseconds 
+BasicType name= long 
+ReturnStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 

@@ -1,0 +1,167 @@
+CompilationUnit 
+Import 
+ClassDeclaration name= Die 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= DEFAULT_SIDES 
+Literal value= 6 
+FieldDeclaration 
+ReferenceType name= Random 
+VariableDeclarator name= ourRandNumGen 
+ClassCreator 
+ReferenceType name= Random 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iMyNumSides 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= iMyResult 
+ConstructorDeclaration name= Die 
+StatementExpression 
+ExplicitConstructorInvocation 
+MemberReference 
+ConstructorDeclaration name= Die 
+FormalParameter name= numSides 
+BasicType name= int 
+AssertStatement value= BinaryOperation(operandl=BinaryOperation(operandl=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Violation of precondition: numSides = "), operandr=MemberReference(member=numSides, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operator=+), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="numSides must be greater than 1"), operator=+) 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Violation of precondition: numSides = " 
+MemberReference 
+Literal value= "numSides must be greater than 1" 
+StatementExpression 
+Assignment value= MemberReference(member=numSides, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1) 
+MemberReference 
+Literal value= 1 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+ConstructorDeclaration name= Die 
+FormalParameter name= numSides 
+BasicType name= int 
+FormalParameter name= result 
+BasicType name= int 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="Violation of precondition") 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+BinaryOperation 
+Literal value= 1 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+Literal value= "Violation of precondition" 
+StatementExpression 
+Assignment value= MemberReference(member=numSides, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MemberReference(member=result, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= roll 
+BasicType name= int 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MethodInvocation(arguments=[MemberReference(member=iMyNumSides, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], member=nextInt, postfix_operators=[], prefix_operators=[], qualifier=ourRandNumGen, selectors=[], type_arguments=None), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=+) 
+MemberReference 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+Literal value= 1 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+Literal value= 1 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= getNumSides 
+BasicType name= int 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= getResult 
+BasicType name= int 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= equals 
+BasicType name= boolean 
+FormalParameter name= otherObj 
+ReferenceType name= Object 
+LocalVariableDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= result 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+IfStatement 
+BinaryOperation 
+This 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+This 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Die 
+VariableDeclarator name= otherDie 
+Cast 
+ReferenceType name= Die 
+MemberReference 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=BinaryOperation(operandl=This(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[MemberReference(member=iMyResult, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None)]), operandr=MemberReference(member=iMyResult, postfix_operators=[], prefix_operators=[], qualifier=otherDie, selectors=[]), operator===), operandr=BinaryOperation(operandl=This(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[MemberReference(member=iMyNumSides, postfix_operators=None, prefix_operators=None, qualifier=None, selectors=None)]), operandr=MemberReference(member=iMyNumSides, postfix_operators=[], prefix_operators=[], qualifier=otherDie, selectors=[]), operator===), operator=&&) 
+MemberReference 
+BinaryOperation 
+BinaryOperation 
+This 
+MemberReference 
+MemberReference 
+BinaryOperation 
+This 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Num sides " 
+MethodInvocation 
+Literal value= " result " 
+MethodInvocation 

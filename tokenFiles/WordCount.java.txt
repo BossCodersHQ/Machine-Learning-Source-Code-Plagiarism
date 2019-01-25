@@ -1,0 +1,432 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= WordCount 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= countWordsViaGUI 
+StatementExpression 
+MethodInvocation 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= key 
+ClassCreator 
+ReferenceType name= Scanner 
+MemberReference 
+DoStatement 
+BinaryOperation 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+Literal value= 0 
+Literal value= 'y' 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+Literal value= "Opening GUI to choose file." 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= words 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "time to count: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Enter number of words to display: " 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= numWordsToShow 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+Literal value= "Perform another count? " 
+StatementExpression 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Problem reading the data file. Exiting the program." 
+MemberReference 
+MethodDeclaration name= countWordsWithArrayList 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+FormalParameter name= fileScanner 
+ReferenceType name= Scanner 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Total number of words: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "number of distincy words: " 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= countWordsWithMap 
+ReferenceType name= Map 
+TypeArgument 
+ReferenceType name= String 
+TypeArgument 
+ReferenceType name= Integer 
+FormalParameter name= fileScanner 
+ReferenceType name= Scanner 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Total number of words: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "number of distincy words: " 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= showWords 
+FormalParameter name= words 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+FormalParameter name= numWordsToShow 
+BasicType name= int 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= showWords 
+FormalParameter name= words 
+ReferenceType name= Map 
+TypeArgument 
+ReferenceType name= String 
+TypeArgument 
+ReferenceType name= Integer 
+FormalParameter name= numWordsToShow 
+BasicType name= int 
+MethodDeclaration name= performExp 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= smallerWorks 
+ArrayInitializer 
+Literal value= "smallWords.txt" 
+Literal value= "2BR02B.txt" 
+Literal value= "Alice.txt" 
+Literal value= "SherlockHolmes.txt" 
+Statement 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= bigFile 
+ArrayInitializer 
+Literal value= "ciaFactBook2008.txt" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 50 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 3 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 50 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 3 
+MethodDeclaration name= timingExpWithMap 
+FormalParameter name= titles 
+ReferenceType name= String 
+FormalParameter name= numExp 
+BasicType name= int 
+TryStatement 
+LocalVariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= times 
+ArrayCreator 
+BasicType name= double 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= NUM_EXP 
+Literal value= 50 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= j 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+ArraySelector 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Map 
+TypeArgument 
+ReferenceType name= String 
+TypeArgument 
+ReferenceType name= Integer 
+VariableDeclarator name= words 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=time, postfix_operators=[], prefix_operators=[], qualifier=st, selectors=[], type_arguments=None) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= a 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Problem reading the data file. Exiting the program." 
+MemberReference 
+MethodDeclaration name= timingExpWithArrayList 
+FormalParameter name= titles 
+ReferenceType name= String 
+FormalParameter name= numExp 
+BasicType name= int 
+TryStatement 
+LocalVariableDeclaration 
+BasicType name= double 
+VariableDeclarator name= times 
+ArrayCreator 
+BasicType name= double 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= j 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+ArraySelector 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= ArrayList 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= words 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=time, postfix_operators=[], prefix_operators=[], qualifier=st, selectors=[], type_arguments=None) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Average time for " 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= ": " 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Problem reading the data file. Exiting the program." 
+MemberReference 
+MethodDeclaration name= setLookAndFeel 
+TryStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Unable to set look at feel to local settings. " 
+Literal value= "Continuing with default Java look and feel." 
+MethodDeclaration name= getFile 
+ReferenceType name= File 
+LocalVariableDeclaration 
+ReferenceType name= JFileChooser 
+VariableDeclarator name= chooser 
+ClassCreator 
+ReferenceType name= JFileChooser 
+Literal value= "." 
+StatementExpression 
+MethodInvocation 
+Literal value= "Select File To Count Words:" 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= retval 
+MethodInvocation 
+Literal value= null 
+LocalVariableDeclaration 
+ReferenceType name= File 
+VariableDeclarator name= f 
+Literal value= null 
+StatementExpression 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+MemberReference 
+MemberReference 
+StatementExpression 
+Assignment value= MethodInvocation(arguments=[], member=getSelectedFile, postfix_operators=[], prefix_operators=[], qualifier=chooser, selectors=[], type_arguments=None) 
+MemberReference 
+MethodInvocation 
+ReturnStatement 
+MemberReference 

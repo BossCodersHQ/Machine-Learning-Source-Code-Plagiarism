@@ -1,0 +1,94 @@
+CompilationUnit 
+ClassDeclaration name= MineSweeper 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= myTruth 
+FieldDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= myShow 
+MethodDeclaration name= cellPicked 
+FormalParameter name= row 
+BasicType name= int 
+FormalParameter name= col 
+BasicType name= int 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= 0 
+BlockStatement 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= r 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= c 
+Literal value= 1 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MethodDeclaration name= inBounds 
+BasicType name= boolean 
+FormalParameter name= row 
+BasicType name= int 
+FormalParameter name= col 
+BasicType name= int 
+ReturnStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+MemberReference 

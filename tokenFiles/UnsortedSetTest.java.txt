@@ -1,0 +1,406 @@
+CompilationUnit 
+PackageDeclaration name= Solution 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+Import 
+ClassDeclaration name= UnsortedSetTest 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= allFileNames 
+ArrayInitializer 
+Literal value= "hounds.txt" 
+Literal value= "huckfinn.txt" 
+Literal value= "oz.txt" 
+Literal value= "war.txt" 
+Literal value= "ciaFactBook2008.txt" 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= noCIA 
+ArrayInitializer 
+Literal value= "hounds.txt" 
+Literal value= "huckfinn.txt" 
+Literal value= "oz.txt" 
+Literal value= "war.txt" 
+StatementExpression 
+MethodInvocation 
+ClassCreator 
+ReferenceType name= BinarySearchTree 
+TypeArgument 
+ReferenceType name= String 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= s 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ClassCreator 
+ReferenceType name= TreeSet 
+TypeArgument 
+ReferenceType name= String 
+MemberReference 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= result 
+MethodInvocation 
+ClassCreator 
+ReferenceType name= HashSet 
+TypeArgument 
+ReferenceType name= String 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+Literal value= 0 
+Literal value= " total words." 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+ArraySelector 
+Literal value= 1 
+Literal value= " distinct words." 
+StatementExpression 
+MethodInvocation 
+MethodDeclaration name= countWordsCollection 
+BasicType name= int 
+FormalParameter name= c 
+ReferenceType name= Collection 
+TypeArgument 
+ReferenceType name= String 
+FormalParameter name= fileName 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Time for " 
+MethodInvocation 
+Literal value= " : \n" 
+MemberReference 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= countWordsOurHash 
+BasicType name= int 
+FormalParameter name= fileName 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+LocalVariableDeclaration 
+ReferenceType name= UnsortedHashSet 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= c 
+ClassCreator 
+ReferenceType name= UnsortedHashSet 
+TypeArgument 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Time for our hashtable (closed address hashing): \n" 
+MemberReference 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= countWordsOurUnsortedSet 
+BasicType name= int 
+FormalParameter name= fileName 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+LocalVariableDeclaration 
+ReferenceType name= UnsortedSet 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= c 
+ClassCreator 
+ReferenceType name= UnsortedSet 
+TypeArgument 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Time for our unsorted set based on ArrayList: \n" 
+MemberReference 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= countWordsOurBinarySearchTree 
+BasicType name= int 
+FormalParameter name= fileName 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+LocalVariableDeclaration 
+ReferenceType name= BinarySearchTree 
+TypeArgument 
+ReferenceType name= String 
+VariableDeclarator name= c 
+ClassCreator 
+ReferenceType name= BinarySearchTree 
+TypeArgument 
+ReferenceType name= String 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Time for our binary search tree: \n" 
+MemberReference 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= countWords 
+BasicType name= int 
+FormalParameter name= c 
+ReferenceType name= Object 
+FormalParameter name= fileName 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= fileScanner 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Stopwatch 
+VariableDeclarator name= st 
+ClassCreator 
+ReferenceType name= Stopwatch 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+LocalVariableDeclaration 
+ReferenceType name= Method 
+VariableDeclarator name= addMethod 
+MethodInvocation 
+MethodInvocation 
+Literal value= "add" 
+ClassReference 
+ReferenceType name= Object 
+StatementExpression 
+MethodInvocation 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MethodInvocation 
+StatementExpression 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Time for " 
+MethodInvocation 
+Literal value= ": " 
+MemberReference 
+LocalVariableDeclaration 
+ReferenceType name= Method 
+VariableDeclarator name= sizeMethod 
+MethodInvocation 
+MethodInvocation 
+Literal value= "size" 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= distictWords 
+Cast 
+ReferenceType name= Integer 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ReturnStatement 
+ArrayCreator 
+BasicType name= int 
+ArrayInitializer 
+MemberReference 
+MemberReference 

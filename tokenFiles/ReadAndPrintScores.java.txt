@@ -1,0 +1,28 @@
+CompilationUnit 
+Import 
+Import 
+Import 
+ClassDeclaration name= ReadAndPrintScores 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+TryStatement 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= s 
+ClassCreator 
+ReferenceType name= Scanner 
+ClassCreator 
+ReferenceType name= File 
+Literal value= "scores.dat" 
+WhileStatement 
+MethodInvocation 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+CatchClause 
+CatchClauseParameter name= e 
+StatementExpression 
+MethodInvocation 
+MemberReference 

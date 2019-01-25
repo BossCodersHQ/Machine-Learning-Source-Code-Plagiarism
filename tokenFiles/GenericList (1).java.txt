@@ -1,0 +1,401 @@
+CompilationUnit 
+PackageDeclaration name= Fall0811 
+Import 
+ClassDeclaration name= GenericList 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= DEFAULT_CAP 
+Literal value= 10 
+FieldDeclaration 
+ReferenceType name= E 
+VariableDeclarator name= container 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= listSize 
+MethodDeclaration name= iterator 
+ReferenceType name= Iterator 
+TypeArgument 
+ReferenceType name= E 
+ReturnStatement 
+ClassCreator 
+ReferenceType name= GenListIterator 
+ClassDeclaration name= GenListIterator 
+FieldDeclaration 
+BasicType name= int 
+VariableDeclarator name= indexOfNextElement 
+FieldDeclaration 
+BasicType name= boolean 
+VariableDeclarator name= okToRemove 
+ConstructorDeclaration name= GenListIterator 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+MethodDeclaration name= hasNext 
+BasicType name= boolean 
+ReturnStatement 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+MethodDeclaration name= next 
+ReferenceType name= E 
+AssertStatement value= None 
+MethodInvocation 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=true) 
+MemberReference 
+Literal value= true 
+StatementExpression 
+MemberReference 
+ReturnStatement 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MethodDeclaration name= remove 
+AssertStatement value= None 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=false) 
+MemberReference 
+Literal value= false 
+StatementExpression 
+MemberReference 
+StatementExpression 
+This 
+MethodInvocation 
+MemberReference 
+ReferenceType name= Iterator 
+TypeArgument 
+ReferenceType name= E 
+MethodDeclaration name= equals 
+BasicType name= boolean 
+FormalParameter name= obj 
+ReferenceType name= Object 
+AssertStatement value= None 
+BinaryOperation 
+This 
+Literal value= null 
+IfStatement 
+BinaryOperation 
+MemberReference 
+Literal value= null 
+ReturnStatement 
+Literal value= false 
+IfStatement 
+BinaryOperation 
+This 
+MemberReference 
+ReturnStatement 
+Literal value= true 
+IfStatement 
+BinaryOperation 
+This 
+MethodInvocation 
+MethodInvocation 
+ReturnStatement 
+Literal value= false 
+BlockStatement 
+LocalVariableDeclaration 
+ReferenceType name= GenericList 
+VariableDeclarator name= list 
+Cast 
+ReferenceType name= GenericList 
+MemberReference 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+MethodInvocation 
+ReturnStatement 
+Literal value= false 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+MemberReference 
+IfStatement 
+BinaryOperation 
+BinaryOperation 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+Literal value= null 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+Literal value= null 
+MethodInvocation 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MemberReference 
+ReturnStatement 
+Literal value= false 
+ReturnStatement 
+Literal value= true 
+ConstructorDeclaration name= GenericList 
+StatementExpression 
+ExplicitConstructorInvocation 
+MemberReference 
+ConstructorDeclaration name= GenericList 
+FormalParameter name= initialCap 
+BasicType name= int 
+AssertStatement value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value="failed precondition") 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+Literal value= "failed precondition" 
+StatementExpression 
+Assignment value= Cast(expression=ArrayCreator(dimensions=[MemberReference(member=initialCap, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[])], initializer=None, postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], type=ReferenceType(arguments=None, dimensions=None, name=Object, sub_type=None)), type=ReferenceType(arguments=None, dimensions=[None], name=E, sub_type=None)) 
+MemberReference 
+Cast 
+ReferenceType name= E 
+ArrayCreator 
+ReferenceType name= Object 
+MemberReference 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=0) 
+MemberReference 
+Literal value= 0 
+MethodDeclaration name= insertAll 
+FormalParameter name= pos 
+BasicType name= int 
+FormalParameter name= otherList 
+ReferenceType name= GenericList 
+TypeArgument 
+ReferenceType name= E 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+This 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodDeclaration name= remove 
+ReferenceType name= E 
+FormalParameter name= pos 
+BasicType name= int 
+LocalVariableDeclaration 
+ReferenceType name= E 
+VariableDeclarator name= result 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MemberReference 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= index 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=container, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=BinaryOperation(operandl=MemberReference(member=index, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=+))]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=null) 
+MemberReference 
+ArraySelector 
+MemberReference 
+Literal value= null 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= insert 
+FormalParameter name= pos 
+BasicType name= int 
+FormalParameter name= element 
+ReferenceType name= E 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= index 
+MethodInvocation 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+AssertStatement value= None 
+BinaryOperation 
+MemberReference 
+Literal value= 0 
+StatementExpression 
+Assignment value= MemberReference(member=container, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=BinaryOperation(operandl=MemberReference(member=index, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=-))]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+ArraySelector 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+StatementExpression 
+Assignment value= MemberReference(member=element, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+ArraySelector 
+MemberReference 
+MemberReference 
+StatementExpression 
+MemberReference 
+MethodDeclaration name= size 
+BasicType name= int 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= get 
+ReferenceType name= E 
+FormalParameter name= position 
+BasicType name= int 
+AssertStatement value= None 
+BinaryOperation 
+BinaryOperation 
+Literal value= 0 
+MemberReference 
+BinaryOperation 
+MemberReference 
+MethodInvocation 
+ReturnStatement 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodDeclaration name= add 
+FormalParameter name= element 
+ReferenceType name= E 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= resize 
+LocalVariableDeclaration 
+ReferenceType name= E 
+VariableDeclarator name= temp 
+Cast 
+ReferenceType name= E 
+ArrayCreator 
+ReferenceType name= Object 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= 2 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+Literal value= 0 
+MemberReference 
+Literal value= 0 
+MethodInvocation 
+StatementExpression 
+Assignment value= MemberReference(member=temp, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+MethodDeclaration name= toString 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= StringBuffer 
+VariableDeclarator name= result 
+ClassCreator 
+ReferenceType name= StringBuffer 
+Literal value= "[" 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= LIMIT 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+IfStatement 
+BinaryOperation 
+This 
+This 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "this list" 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= ", " 
+IfStatement 
+BinaryOperation 
+MethodInvocation 
+Literal value= 0 
+StatementExpression 
+MethodInvocation 
+MethodInvocation 
+BinaryOperation 
+MethodInvocation 
+Literal value= 1 
+StatementExpression 
+MethodInvocation 
+Literal value= "]" 
+ReturnStatement 
+MethodInvocation 
+TypeParameter name= E 
+ReferenceType name= Iterable 
+TypeArgument 
+ReferenceType name= E 

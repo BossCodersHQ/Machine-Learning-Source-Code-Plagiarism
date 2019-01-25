@@ -1,0 +1,26 @@
+CompilationUnit 
+Import 
+ClassDeclaration name= ScannerAndKeyboard 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+ReferenceType name= Scanner 
+VariableDeclarator name= s 
+ClassCreator 
+ReferenceType name= Scanner 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Enter your name: " 
+LocalVariableDeclaration 
+ReferenceType name= String 
+VariableDeclarator name= name 
+MethodInvocation 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+Literal value= "Hello " 
+MemberReference 
+Literal value= "!" 

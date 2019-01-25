@@ -1,0 +1,172 @@
+CompilationUnit 
+ClassDeclaration name= EnhancedFor 
+MethodDeclaration name= main 
+FormalParameter name= args 
+ReferenceType name= String 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= list 
+ArrayInitializer 
+Literal value= 1 
+Literal value= 2 
+Literal value= 3 
+Literal value= 4 
+Literal value= 5 
+Literal value= 6 
+Literal value= 7 
+Literal value= 8 
+Literal value= 9 
+Literal value= 10 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= sum 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+Literal value= "Sum of elements in list: " 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Original List" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Calling addOne" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "List after call to addOne" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "Calling addOneError" 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+Literal value= "List after call to addOneError. Note elements of list did not change." 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+MethodDeclaration name= sumListEnhanced 
+BasicType name= int 
+FormalParameter name= list 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= val 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=val, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]) 
+MemberReference 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= sumListOld 
+BasicType name= int 
+FormalParameter name= list 
+BasicType name= int 
+LocalVariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= total 
+Literal value= 0 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= MemberReference(member=list, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[ArraySelector(index=MemberReference(member=i, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]))]) 
+MemberReference 
+MemberReference 
+ArraySelector 
+MemberReference 
+StatementExpression 
+MethodInvocation 
+MemberReference 
+ArraySelector 
+MemberReference 
+ReturnStatement 
+MemberReference 
+MethodDeclaration name= addOneError 
+FormalParameter name= list 
+BasicType name= int 
+ForStatement 
+EnhancedForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= val 
+MemberReference 
+BlockStatement 
+StatementExpression 
+Assignment value= BinaryOperation(operandl=MemberReference(member=val, postfix_operators=[], prefix_operators=[], qualifier=, selectors=[]), operandr=Literal(postfix_operators=[], prefix_operators=[], qualifier=None, selectors=[], value=1), operator=+) 
+MemberReference 
+BinaryOperation 
+MemberReference 
+Literal value= 1 
+MethodDeclaration name= addOne 
+FormalParameter name= list 
+BasicType name= int 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MemberReference 
+ArraySelector 
+MemberReference 
+MethodDeclaration name= printList 
+FormalParameter name= list 
+BasicType name= int 
+StatementExpression 
+MethodInvocation 
+Literal value= "index, value" 
+ForStatement 
+ForControl 
+VariableDeclaration 
+BasicType name= int 
+VariableDeclarator name= i 
+Literal value= 0 
+BinaryOperation 
+MemberReference 
+MemberReference 
+MemberReference 
+BlockStatement 
+StatementExpression 
+MethodInvocation 
+BinaryOperation 
+BinaryOperation 
+MemberReference 
+Literal value= ", " 
+MemberReference 
+ArraySelector 
+MemberReference 
