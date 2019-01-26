@@ -2,6 +2,8 @@ import javalang
 import os
 import shutil
 import re
+import sys #used for system exceptions
+
 
 code = '''public class HelloWorld {
 
@@ -33,12 +35,61 @@ public class HelloWorld {
 
 }
 '''
+minMatchLength = 9
+def greedyTiling( treelistA, treelistB):
+    tiles = []
+    markedTokensA = []
+    markedTokensB = []
+    while True:
+        maxMatch = minMatchLength
+        matches = []
+        unmarkedTokensA = [x for x in treelistA if x in treelistA and x not in markedTokensA]
+        unmarkedTokensB = [x for x in treelistB if x in treelistB and x not in markedTokensB]
+        for indexA, tokenA in enumerate(unmarkedTokensA):
+            for indexB, tokenB in enumerate(unmarkedTokensB):
+                j = 0
+                tempList = []
+                while unmarkedTokensA[indexA + j] == unmarkedTokensB[indexB + j]:
+                    # print("hello")
+                    tempList.append(unmarkedTokensA[indexA + j])
+                    j = j + 1
+                    if (indexA + j) >= len(unmarkedTokensA):
+                        # print("breaking")
+                        break
+                    if (indexB + j) >= len(unmarkedTokensB):
+                        # print("breaking2")
+                        break
+                # print("goodbye")
+                if j == maxMatch:
+                    # print("max match found")
+                    matches.append(tempList)
+                elif (j>maxMatch):
+                    matches = []
+                    matches.append(tempList)
+                    maxMatch = j
+        for match in matches:
+            for i in range(0,len(match)):
+                markedTokensA.append(match[i])
+                markedTokensB.append(match[i])
+            tiles.append(match)
+        if maxMatch <= minMatchLength:
+            break
+    return tiles
+
 treelist = []
 treelist2 = []
 strin = "^[a-zA-Z0-9]*(_[a-zA-Z0-9]*)+"
+
 try:
-    tree = javalang.parse.parse(code)
-    tree2 = javalang.parse.parse(code2)
+    file1 = open("jfiles/AirlineProblem.java", "r")
+    file2 = open("jfiles/ArrayExamples.java", "r")
+except FileNotFoundError:
+    print("File was not found")
+except:
+    print (sys.exc_info()[0])
+try:
+    tree = javalang.parse.parse("".join(file1.readlines()))
+    tree2 = javalang.parse.parse("".join(file2.readlines()))
     for path, node in tree:
         #   checking for one attribute
         # if (type(node) == javalang.tree.LocalVariableDeclaration):
@@ -55,31 +106,22 @@ try:
 
     print("printing tree 1:")
     for x in treelist:
-        print(str(x) + "\n")
+        print(str(x))
     print("printing tree 2:")
     for x in treelist2:
-        print(str(x) + "\n")
+        print(str(x))
+    print()
 
-    count =0
-    start = False
-    maximalMatches = []
-    list = []
-    for node in treelist:
-        for node2 in treelist2:
-            if node == node2:
-                start = True
-                count + 1;
-                maximalMatches.append(node2)
-            else:
-                if start == True:
-                    treelist = [x for x in treelist if x not in maximalMatches]
-                    treelist2 = [x for x in treelist2 if x not in maximalMatches]
-                    count = 0
-                    start = False
-                    list.append(maximalMatches)
-                    maximalMatches = []
+    list = greedyTiling(treelist,treelist2)
     for x in list:
-        print(str(x) + "\n")
+        print()
+        print("LIST")
+        print()
+        for y in x:
+            print(y)
+
+    # for x in list:
+    #     print(str(x) + "\n")
 
 except javalang.parser.JavaSyntaxError as inst:
     print(inst)
