@@ -2,126 +2,140 @@ import javalang
 import os
 import shutil
 import re
-import sys #used for system exceptions
+import sys      # used for system exceptions
+import inspect  # used yo check objects for all methods
+import nodeutil # contains util methods
+import constants
 
 
-code = '''public class HelloWorld {
-
-    public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        Integer blow;
-        int int_32_temp = 12;
-        bool boy_bye = true;
-        String out =  "Hello World";
-        System.out.println(out);
-    }
-
-}
-'''
-
-code2 = '''
-
-//class to print out the helloworld class
-public class HelloWorld {
-
-    public static void main(String[] args) {
-        printHello();
-    }
-
-    public static void printHello(){
-        //prints out helloworld
-        System.out.println("Hello, World");
-    }
-
-}
-'''
 minMatchLength = 9
-def greedyTiling( treelistA, treelistB):
+minNumLineMatches = 4  # The number of different lines that a match has to be found on
+
+# # Calculates similarity score for 2 ast's based on the matches
+# def calculateScore(matchlist, treelistA, treelistB):
+#     lengthA = len(treelistA)
+#     lengthB = len(treelistB)
+#     count = 0
+#     for match in matchlist:
+#         for token in match:
+#             count += 1
+#     score = (2 * count) / (lengthA + lengthB)
+#     return score
+
+
+#   returns a score given 2 files
+def greedyTiling( treeA, treeB ):
+
+    treelistA = nodeutil.convertToList(treeA)
+    treelistB = nodeutil.convertToList(treeB)
     tiles = []
-    markedTokensA = []
-    markedTokensB = []
+    previousLine = 0
+
+    currentLineMatches = 0
     while True:
         maxMatch = minMatchLength
         matches = []
-        unmarkedTokensA = [x for x in treelistA if x in treelistA and x not in markedTokensA]
-        unmarkedTokensB = [x for x in treelistB if x in treelistB and x not in markedTokensB]
+        unmarkedTokensA = [x for x in treelistA if not x.marked]
+        unmarkedTokensB = [x for x in treelistB if not x.marked]
         for indexA, tokenA in enumerate(unmarkedTokensA):
             for indexB, tokenB in enumerate(unmarkedTokensB):
+                currentLineNum = []
                 j = 0
-                tempList = []
+                matchList = []
                 while unmarkedTokensA[indexA + j] == unmarkedTokensB[indexB + j]:
                     # print("hello")
-                    tempList.append(unmarkedTokensA[indexA + j])
-                    j = j + 1
-                    if (indexA + j) >= len(unmarkedTokensA):
-                        # print("breaking")
+                    tuple = (unmarkedTokensA[indexA + j],unmarkedTokensB[indexB + j])
+
+                    #   checking if the tokens line numbers have already been recorded. If they havent then they are recorded
+                    if (tuple[0].line,tuple[1].line) not in currentLineNum:
+                        currentLineNum.append((tuple[0].line,tuple[1].line))
+
+                    matchList.append(tuple)
+                    j += 1
+
+                    #   if the next iteration would cause a loop out of bounds exception
+                    if (indexA + j) >= len(unmarkedTokensA) or (indexB + j) >= len(unmarkedTokensB):
                         break
-                    if (indexB + j) >= len(unmarkedTokensB):
-                        # print("breaking2")
-                        break
-                # print("goodbye")
-                if j == maxMatch:
-                    # print("max match found")
-                    matches.append(tempList)
-                elif (j>maxMatch):
+
+                if j == maxMatch and len(currentLineNum)>minNumLineMatches:
+                    matches.append(matchList)
+                elif (j>maxMatch) and len(currentLineNum)>minNumLineMatches:
                     matches = []
-                    matches.append(tempList)
+                    matches.append(matchList)
                     maxMatch = j
         for match in matches:
             for i in range(0,len(match)):
-                markedTokensA.append(match[i])
-                markedTokensB.append(match[i])
+                match[i][0].marked = True
+                match[i][1].marked = True
             tiles.append(match)
+
         if maxMatch <= minMatchLength:
             break
-    return tiles
 
-treelist = []
-treelist2 = []
-strin = "^[a-zA-Z0-9]*(_[a-zA-Z0-9]*)+"
+    lengthA = len(treelistA)
+    lengthB = len(treelistB)
+    count = 0
 
-try:
-    file1 = open("jfiles/AirlineProblem.java", "r")
-    file2 = open("jfiles/ArrayExamples.java", "r")
-except FileNotFoundError:
-    print("File was not found")
-except:
-    print (sys.exc_info()[0])
-try:
-    tree = javalang.parse.parse("".join(file1.readlines()))
-    tree2 = javalang.parse.parse("".join(file2.readlines()))
-    for path, node in tree:
-        #   checking for one attribute
-        # if (type(node) == javalang.tree.LocalVariableDeclaration):
-        #     list = [method_name for method_name in dir(node) if callable(getattr(node, method_name))]
-        #     # print(node)
-        #     print(getattr(getattr(node,'type'),'name'))
-        #     var = str(getattr(getattr(node,'declarators')[0],'name'))
-        #     x = re.search(strin,var)
-        #     print(x)
-        #     print(getattr(getattr(node,'declarators')[0],'name'))
-        treelist.append(str(type(node)))
-    for path,node in tree2:
-        treelist2.append(str(type(node)))
+    for match in tiles:
+        for token in match:
+            count += 1
+    score = (2 * count) / (lengthA + lengthB)
 
-    print("printing tree 1:")
-    for x in treelist:
-        print(str(x))
-    print("printing tree 2:")
-    for x in treelist2:
-        print(str(x))
-    print()
+    return score
 
-    list = greedyTiling(treelist,treelist2)
-    for x in list:
-        print()
-        print("LIST")
-        print()
-        for y in x:
-            print(y)
-
-    # for x in list:
-    #     print(str(x) + "\n")
-
-except javalang.parser.JavaSyntaxError as inst:
-    print(inst)
+# treelist = []
+# treelist2 = []
+# strin = "^[a-zA-Z0-9]*(_[a-zA-Z0-9]*)+"
+#
+# try:
+#     add1 = constants.SOCO_TRAIN + "003.java"
+#     add2 = constants.SOCO_TRAIN + "004.java"
+#     file1 = open(add1, "r")
+#     file2 = open(add2, "r")
+# except FileNotFoundError:
+#     print("File was not found")
+# except:
+#     print (sys.exc_info()[0])
+# try:
+#     tree = javalang.parse.parse("".join(file1.readlines()))
+#     tree2 = javalang.parse.parse("".join(file2.readlines()))
+#
+#     # tree = javalang.parse.parse(code)
+#     # tree2 = javalang.parse.parse(code2)
+#
+#     for path, node in tree:
+#         #   checking for one attribute
+#         # if (type(node) == javalang.tree.LocalVariableDeclaration):
+#         #     list = [method_name for method_name in dir(node) if callable(getattr(node, method_name))]
+#         #     # print(node)
+#         #     print(getattr(getattr(node,'type'),'name'))
+#         #     var = str(getattr(getattr(node,'declarators')[0],'name'))
+#         #     x = re.search(strin,var)
+#         #     print(x)
+#         #     print(getattr(getattr(node,'declarators')[0],'name'))
+#         treelist.append(NodeContainer(node))
+#     for path,node in tree2:
+#         treelist2.append(NodeContainer(node))
+#
+#     list = greedyTiling(treelist,treelist2)
+#     score = calculateScore(list,treelist,treelist2)
+#     # for x in list:
+#     #     print()
+#     #     print("LIST")
+#     #     print()
+#     #     for y in x:
+#     #         print(str(y[0]) + " |\t"+str(y[1]))
+#     print("Similarity Score: "+ str(score))
+#     print("Number of Matches: " + str(len(list)))
+#
+#     # count = 0
+#     # for x in treelist:
+#     #     print(dir(x))
+#     #     print(getattr(x,"position"))
+#     #     print()
+#     #     count += 1
+#     #     if count>2:
+#     #         break
+#
+# except javalang.parser.JavaSyntaxError as inst:
+#     print(inst)
