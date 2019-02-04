@@ -16,8 +16,8 @@ import numpy as np
 
 start = time.time()  # #start recording how long program takes
 
-currDirectory = "jfiles/"
-# currDirectory = constants.SOCO_TRAIN
+# currDirectory = "jfiles/"
+currDirectory = constants.SOCO_TRAIN
 
 
 javadir = os.listdir(currDirectory)  # directory where all java files will be stored
@@ -86,9 +86,10 @@ for filename, file in files.items():
     try:
         text = "".join(file.readlines())
         print(str(filename) + ": "+str(attributes.raw_text_attributes(text)))
+        sys.stdout.flush()
         tree = javalang.parse.parse(text)
     except javalang.parser.JavaSyntaxError as inst:
-        print(str(filename) + " couldnt compile")
+        print(str(filename) + " couldn't compile")
         print(inst)
     treeMap[filename] = tree
 
