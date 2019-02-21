@@ -24,56 +24,57 @@ minNumLineMatches = 4  # The number of different lines that a match has to be fo
 
 
 #   returns a score given 2 files
-def greedyTiling( treeA, treeB ):
+def greedy_tiling(tree_a, tree_b):
 
-    treelistA = nodeutil.convertToList(treeA)
-    treelistB = nodeutil.convertToList(treeB)
+    treelist_a = nodeutil.convertToList(tree_a)
+    treelist_b = nodeutil.convertToList(tree_b)
     tiles = []
     previousLine = 0
 
     currentLineMatches = 0
     while True:
-        maxMatch = minMatchLength
+        max_match = minMatchLength
         matches = []
-        unmarkedTokensA = [x for x in treelistA if not x.marked]
-        unmarkedTokensB = [x for x in treelistB if not x.marked]
-        for indexA, tokenA in enumerate(unmarkedTokensA):
-            for indexB, tokenB in enumerate(unmarkedTokensB):
-                currentLineNum = []
+        unmarked_tokens_a = [x for x in treelist_a if not x.marked]
+        unmarked_tokens_b = [x for x in treelist_b if not x.marked]
+        for indexA, tokenA in enumerate(unmarked_tokens_a):
+            for indexB, tokenB in enumerate(unmarked_tokens_b):
+                current_line_num = []
                 j = 0
                 matchList = []
-                while unmarkedTokensA[indexA + j] == unmarkedTokensB[indexB + j]:
+                while unmarked_tokens_a[indexA + j] == unmarked_tokens_b[indexB + j]:
                     # print("hello")
-                    tuple = (unmarkedTokensA[indexA + j],unmarkedTokensB[indexB + j])
+                    tuple = (unmarked_tokens_a[indexA + j],unmarked_tokens_b[indexB + j])
 
-                    #   checking if the tokens line numbers have already been recorded. If they havent then they are recorded
-                    if (tuple[0].line,tuple[1].line) not in currentLineNum:
-                        currentLineNum.append((tuple[0].line,tuple[1].line))
+                    # checking if the tokens line numbers have already been recorded. If they haven't then they are
+                    # recorded
+                    if (tuple[0].line,tuple[1].line) not in current_line_num:
+                        current_line_num.append((tuple[0].line,tuple[1].line))
 
                     matchList.append(tuple)
                     j += 1
 
                     #   if the next iteration would cause a loop out of bounds exception
-                    if (indexA + j) >= len(unmarkedTokensA) or (indexB + j) >= len(unmarkedTokensB):
+                    if (indexA + j) >= len(unmarked_tokens_a) or (indexB + j) >= len(unmarked_tokens_b):
                         break
 
-                if j == maxMatch and len(currentLineNum)>minNumLineMatches:
+                if j == max_match and len(current_line_num)>minNumLineMatches:
                     matches.append(matchList)
-                elif (j>maxMatch) and len(currentLineNum)>minNumLineMatches:
+                elif (j>max_match) and len(current_line_num)>minNumLineMatches:
                     matches = []
                     matches.append(matchList)
-                    maxMatch = j
+                    max_match = j
         for match in matches:
             for i in range(0,len(match)):
                 match[i][0].marked = True
                 match[i][1].marked = True
             tiles.append(match)
 
-        if maxMatch <= minMatchLength:
+        if max_match <= minMatchLength:
             break
 
-    lengthA = len(treelistA)
-    lengthB = len(treelistB)
+    lengthA = len(treelist_a)
+    lengthB = len(treelist_b)
     count = 0
 
     for match in tiles:
