@@ -6,6 +6,8 @@ import sys      # used for system exceptions
 import inspect  # used yo check objects for all methods
 import nodeutil # contains util methods
 import constants
+import time  # used to record how long methods take to run
+import itertools
 
 
 minMatchLength = 9
@@ -26,8 +28,8 @@ minNumLineMatches = 4  # The number of different lines that a match has to be fo
 #   returns a score given 2 files
 def greedy_tiling(tree_a, tree_b):
 
-    treelist_a = nodeutil.convertToList(tree_a)
-    treelist_b = nodeutil.convertToList(tree_b)
+    treelist_a = nodeutil.convert_to_list(tree_a)
+    treelist_b = nodeutil.convert_to_list(tree_b)
     tiles = []
     previousLine = 0
 
@@ -40,18 +42,18 @@ def greedy_tiling(tree_a, tree_b):
         for indexA, tokenA in enumerate(unmarked_tokens_a):
             for indexB, tokenB in enumerate(unmarked_tokens_b):
                 current_line_num = []
-                j = 0
-                matchList = []
+                j = 0   # used as a counter to extend matches
+                match_list = []
                 while unmarked_tokens_a[indexA + j] == unmarked_tokens_b[indexB + j]:
                     # print("hello")
-                    tuple = (unmarked_tokens_a[indexA + j],unmarked_tokens_b[indexB + j])
+                    tuple = (unmarked_tokens_a[indexA + j], unmarked_tokens_b[indexB + j])
 
                     # checking if the tokens line numbers have already been recorded. If they haven't then they are
                     # recorded
-                    if (tuple[0].line,tuple[1].line) not in current_line_num:
-                        current_line_num.append((tuple[0].line,tuple[1].line))
+                    if (tuple[0].line, tuple[1].line) not in current_line_num:
+                        current_line_num.append((tuple[0].line, tuple[1].line))
 
-                    matchList.append(tuple)
+                    match_list.append(tuple)
                     j += 1
 
                     #   if the next iteration would cause a loop out of bounds exception
@@ -59,10 +61,10 @@ def greedy_tiling(tree_a, tree_b):
                         break
 
                 if j == max_match and len(current_line_num)>minNumLineMatches:
-                    matches.append(matchList)
+                    matches.append(match_list)
                 elif (j>max_match) and len(current_line_num)>minNumLineMatches:
                     matches = []
-                    matches.append(matchList)
+                    matches.append(match_list)
                     max_match = j
         for match in matches:
             for i in range(0,len(match)):
@@ -81,8 +83,95 @@ def greedy_tiling(tree_a, tree_b):
         for token in match:
             count += 1
     score = (2 * count) / (lengthA + lengthB)
-
+    print("Printing length of tiles")
+    for x in tiles:
+        print(len(x))
     return score
+
+
+if __name__ == '__main__':
+    # def main(curr_directory="jfiles2/"):
+    start = time.time()  # #start recording how long program takes
+
+    curr_directory = "jfiles2/"
+    # currDirectory = constants.SOCO_TRAIN
+
+    javadir = os.listdir(curr_directory)  # directory where all java files will be stored
+
+    files = []
+    error_msgs = {}
+    faulty_files = []
+    tree_map = {}  # Stores all trees created from the all the files in a separate dictionary
+
+    for filename in javadir:
+        address = curr_directory + "/" + str(filename)
+        try:
+            file = open(address, "r")
+            # files[str(filename)] = file
+            files.append(str(filename))
+
+            text = "".join(file.readlines())
+
+            tree = javalang.parse.parse(text)
+            tree_map[filename] = tree
+
+        except FileNotFoundError:
+            print("File " + str(filename) + " was not found")
+        except javalang.parser.JavaSyntaxError as inst:
+            print(str(filename) + " couldn't compile")
+            faulty_files.append(filename)
+        except Exception as inst:
+            error_msgs[filename] = str(inst)
+
+    #  2 loops used to go through all pairings of files and perform a structure based method on all of then_statement
+    #  The scores are stored in the score map
+    score_map = {}
+
+    # -------------------  Greedy String Tiling  ---------------------#
+    for filename_1, filename_2 in itertools.combinations(tree_map, 2):
+
+        # the next section ensures that the key for 2 trees in the score map will be the same no matter
+        # which tree is tree_1 / tree_2
+        hash1 = hash(filename_1)
+        hash2 = hash(filename_2)
+        if hash1 >= hash2:
+            key = (filename_1, filename_2)
+        else:
+            key = (filename_2, filename_1)
+
+        tree_1 = tree_map[filename_1]
+        tree_2 = tree_map[filename_2]
+
+        score = greedy_tiling(tree_1, tree_2)
+
+        print("Comparing " + filename_1 + "-" + filename_2 + ": " + str(score))
+        score_map[key] = score
+
+    f = open("result.txt", "w")
+    for key, score in score_map.items():
+        if score > constants.SIMILARITY_THRESHOLD:
+            f.write("Similarity Score for " + str(key) + " is : " + str(score))
+
+    # ----------------  End of Greedy String Tiling  ----------------#
+
+    end = time.time()  # stop recording time
+    print("Execution time: " + str(end - start) + " seconds")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # treelist = []
 # treelist2 = []

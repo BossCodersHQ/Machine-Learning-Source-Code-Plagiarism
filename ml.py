@@ -12,6 +12,10 @@ from greedystring import greedy_tiling
 import attributes
 import constants
 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+
 import pandas as pd
 import numpy as np
 
@@ -69,6 +73,7 @@ raw_tree_df.set_index("filename", inplace=True)
 
 attribute_df = pd.concat([lizard_df, raw_tree_df], axis=1, sort=True).astype(float)
 attribute_df.reset_index(inplace=True)   # gets rid of filename index
+attribute_df.rename(columns={"index": "filename"}, inplace=True)
 
 full_df_col = list(attribute_df)     # gets the column values from full dataframe
 full_df_rows = attribute_df.values.tolist()   # getting all the rows from the full dataframe
@@ -100,16 +105,14 @@ for pair in pairings:
     except KeyError as ke:
         continue
 
-# # print to file
-# final_df.to_csv("dataframes/SOCO_TRAIN.csv", index = False)
-# print(df)
+# train, test = train_test_split(final_df)
+# rf_classifier = RandomForestClassifier(n_estimators=100)
+# # k_classifier = KNeighborsClassifier()
+#
+# rf_classifier.fit(train.drop(['similarity'], axis=1), train['similarity'].values.ravel())
 
-tuplelist = []
-
-# for filename, tree in treeMap.items():
-#     x = (filename, attributes.variable_name_style(tree))
-#     tuplelist.append(x)
-#     print(x)
+# print to file
+# final_df.to_csv("dataframes/soco_train.csv", index=True)
 
 end = time.time()  # stop recording time
 print("Execution time: " + str(end - start) + " seconds")

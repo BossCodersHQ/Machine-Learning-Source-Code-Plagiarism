@@ -41,7 +41,9 @@ public class AirlineProblem {
                 System.out.println("Cannot convert miles from " + start + " to " + goal + ".");
         }
     }
-    
+    /** docstring
+    comment
+    **/
     private static boolean canRedeem(String current, String goal,
             ArrayList<String> pathForMiles, ArrayList<String> airlinesVisited,
             ArrayList<Airline> network){
