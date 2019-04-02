@@ -8,10 +8,11 @@ import nodeutil # contains util methods
 import constants
 import time  # used to record how long methods take to run
 import itertools
+import tkinter as tk
+import util
+import csv
 
-
-minMatchLength = 9
-minNumLineMatches = 4  # The number of different lines that a match has to be found on
+constants.MIN_LINE_MATCHES = 4  # The number of different lines that a match has to be found on
 
 # # Calculates similarity score for 2 ast's based on the matches
 # def calculateScore(matchlist, treelistA, treelistB):
@@ -26,7 +27,7 @@ minNumLineMatches = 4  # The number of different lines that a match has to be fo
 
 
 #   returns a score given 2 files
-def greedy_tiling(tree_a, tree_b):
+def gst(tree_a, tree_b):
 
     treelist_a = nodeutil.convert_to_list(tree_a)
     treelist_b = nodeutil.convert_to_list(tree_b)
@@ -35,7 +36,7 @@ def greedy_tiling(tree_a, tree_b):
 
     currentLineMatches = 0
     while True:
-        max_match = minMatchLength
+        max_match = constants.MIN_MATCH_LENGTH
         matches = []
         unmarked_tokens_a = [x for x in treelist_a if not x.marked]
         unmarked_tokens_b = [x for x in treelist_b if not x.marked]
@@ -60,9 +61,9 @@ def greedy_tiling(tree_a, tree_b):
                     if (indexA + j) >= len(unmarked_tokens_a) or (indexB + j) >= len(unmarked_tokens_b):
                         break
 
-                if j == max_match and len(current_line_num)>minNumLineMatches:
+                if j == max_match and len(current_line_num)>constants.MIN_LINE_MATCHES:
                     matches.append(match_list)
-                elif (j>max_match) and len(current_line_num)>minNumLineMatches:
+                elif (j>max_match) and len(current_line_num)>constants.MIN_LINE_MATCHES:
                     matches = []
                     matches.append(match_list)
                     max_match = j
@@ -72,7 +73,7 @@ def greedy_tiling(tree_a, tree_b):
                 match[i][1].marked = True
             tiles.append(match)
 
-        if max_match <= minMatchLength:
+        if max_match <= constants.MIN_MATCH_LENGTH:
             break
 
     lengthA = len(treelist_a)
@@ -83,20 +84,26 @@ def greedy_tiling(tree_a, tree_b):
         for token in match:
             count += 1
     score = (2 * count) / (lengthA + lengthB)
-    print("Printing length of tiles")
-    for x in tiles:
-        print(len(x))
+    # print("Printing length of tiles")
+    # for x in tiles:
+    #     print(len(x))
     return score
 
 
-if __name__ == '__main__':
-    # def main(curr_directory="jfiles2/"):
+# if __name__ == '__main__':
+def main(source_dir, output_dir, outbox):
     start = time.time()  # #start recording how long program takes
 
-    curr_directory = "jfiles2/"
+    # curr_directory = "jfiles2/"
     # currDirectory = constants.SOCO_TRAIN
 
-    javadir = os.listdir(curr_directory)  # directory where all java files will be stored
+
+    try:
+        javadir = os.listdir(source_dir)  # directory where all java files will be stored
+    except FileNotFoundError as inst:
+        util.print_tk(outbox, "Incorrect Directory Entered\n")
+        return 0
+    util.print_tk(outbox, "Reading Files..\n")
 
     files = []
     error_msgs = {}
@@ -104,7 +111,7 @@ if __name__ == '__main__':
     tree_map = {}  # Stores all trees created from the all the files in a separate dictionary
 
     for filename in javadir:
-        address = curr_directory + "/" + str(filename)
+        address = source_dir + "/" + str(filename)
         try:
             file = open(address, "r")
             # files[str(filename)] = file
@@ -116,9 +123,9 @@ if __name__ == '__main__':
             tree_map[filename] = tree
 
         except FileNotFoundError:
-            print("File " + str(filename) + " was not found")
+            util.print_tk(outbox, "File " + str(filename) + " was not found\n")
         except javalang.parser.JavaSyntaxError as inst:
-            print(str(filename) + " couldn't compile")
+            util.print_tk(outbox, str(filename) + " couldn't compile\n")
             faulty_files.append(filename)
         except Exception as inst:
             error_msgs[filename] = str(inst)
@@ -129,6 +136,9 @@ if __name__ == '__main__':
 
     # -------------------  Greedy String Tiling  ---------------------#
     for filename_1, filename_2 in itertools.combinations(tree_map, 2):
+
+        if util.STOPFLAG:
+            break      # Used to exit function
 
         # the next section ensures that the key for 2 trees in the score map will be the same no matter
         # which tree is tree_1 / tree_2
@@ -142,20 +152,26 @@ if __name__ == '__main__':
         tree_1 = tree_map[filename_1]
         tree_2 = tree_map[filename_2]
 
-        score = greedy_tiling(tree_1, tree_2)
+        score = gst(tree_1, tree_2) * 100
+        str_score = '%.2f' % score  # rounds score too 2 dp to display
 
-        print("Comparing " + filename_1 + "-" + filename_2 + ": " + str(score))
+        util.print_tk(outbox, "Compared " + filename_1 + "-" + filename_2 + ": " + str_score + "% \n")
         score_map[key] = score
 
-    f = open("result.txt", "w")
-    for key, score in score_map.items():
-        if score > constants.SIMILARITY_THRESHOLD:
-            f.write("Similarity Score for " + str(key) + " is : " + str(score))
+    # f = open("result.txt", "w")
+    # for key, score in score_map.items():
+    #     if score > constants.SIMILARITY_THRESHOLD:
+    #         f.write("Similarity Score for " + str(key) + " is : " + str(score))
 
     # ----------------  End of Greedy String Tiling  ----------------#
-
     end = time.time()  # stop recording time
-    print("Execution time: " + str(end - start) + " seconds")
+
+    util.print_tk(outbox, "Execution time: " + str(end - start) + " seconds\n")
+    if util.STOPFLAG:
+        util.print_tk(outbox, "Comparisons interrupted\n")
+        util.STOPFLAG = False
+    else:
+        util.print_tk(outbox, "--Finished Comparisons--\n")
 
 
 

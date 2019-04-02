@@ -4,22 +4,56 @@ from typing import List
 import javalang
 import re
 import lizard
-import pandas as pd  # used for creating dataframes
+from spellchecker import SpellChecker
 
 
 # --------------------------- Tree Attributes ---------------------------------#
 def variable_name_style(tree):
-    """ Method returns 3-tuple
+    """ Method returns 6-tuple
+            total_var_count:      Stores the total number of variables
             avg_var_length:     Stores the average length of variables in the tree
             num_type1_matches:  Stores the number of variables with the form "var_name"
             num_type2_matches:  Stores the number of variables with the form "varName"
+            num_type3_matches:  Stores the number of variables with the form "VARNAME"
+            num_type4_matches:  Stores all other types of variable names
+            mispelled:          Stores the number of spelling errors in variable names
     """
 
-    type1 = "^[a-zA-Z0-9]+(_[a-zA-Z0-9]*)+"  # first type of variable nameing
-    type2 = "^[a-z0-9]+([A-Z]+[a-zA-Z0-9])+"  # second type of variable nameming
+    type1 = "^[_a-z0-9]+"  # first type of variable naming
+    type2 = "^[a-z0-9]+(?:[A-Z]+[a-z0-9]*)+"  # second type of variable naming
+    type3 = "^[_A-Z0-9]+"  # third type of variable naming
+
+    spell = SpellChecker()  # creates spell checker object
 
     num_type1_matches = 0
     num_type2_matches = 0
+    num_type3_matches = 0
+    num_type4_matches = 0
+
+    def match_checker(var_name):
+        nonlocal num_type1_matches, num_type2_matches, num_type3_matches, num_type4_matches
+        matches_type1 = re.fullmatch(type1, name)
+        if matches_type1 is not None:
+            num_type1_matches += 1
+            word = [i for i in re.split(r'[^a-zA-Z]', name) if i != '']
+            return len(spell.unknown(word))
+
+        matches_type2 = re.fullmatch(type2, name)
+        if matches_type2 is not None:
+            num_type2_matches += 1
+            word = [i for i in re.split(r'([A-Z]?[a-z]*)', name) if i != '']
+            return len(spell.unknown(word))
+
+        matches_type3 = re.fullmatch(type3, name)
+        if matches_type3 is not None:
+            num_type3_matches += 1
+            word = [i for i in re.split(r'[^A-Z]', name) if i != '']
+            return len(spell.unknown(word))
+
+        num_type4_matches += 1
+        return len(spell.unknown(var_name))
+
+    misspelled = 0
 
     total_var_count = 0  # stores the total number of variables
     total_len = 0  # stores the total length of aall variables
@@ -28,21 +62,15 @@ def variable_name_style(tree):
         # print(node)
         # vartype = getattr(getattr(node, 'type'), 'name')
         name = getattr(getattr(node, 'declarators')[0], 'name')
-        matches_type1 = re.findall(type1, name)
-        matches_type2 = re.findall(type2, name)
 
-        num_type1_matches += len(matches_type1)
-        num_type2_matches += len(matches_type2)
+        misspelled += match_checker(name)
 
         total_var_count += 1
         total_len += len(name)
     for path, node in tree.filter(javalang.tree.VariableDeclarator):
         name = getattr(node, 'name')
-        matches_type1 = re.findall(type1, name)
-        matches_type2 = re.findall(type2, name)
 
-        num_type1_matches += len(matches_type1)
-        num_type2_matches += len(matches_type2)
+        misspelled += match_checker(name)
 
         total_var_count += 1
         total_len += len(name)
@@ -51,7 +79,8 @@ def variable_name_style(tree):
     except ZeroDivisionError as zt:
         avg_var_length = None
 
-    return avg_var_length, num_type1_matches, num_type2_matches
+    return total_var_count, avg_var_length, num_type1_matches, num_type2_matches, \
+           num_type3_matches, num_type4_matches, misspelled
 
 
 def token_length(tree):
@@ -108,20 +137,28 @@ def accessor_metrics(file):
     private_match = len(re.findall(r"private", file))
     protected_match = len(re.findall(r"protected", file))
     total_matches = public_match + private_match + protected_match
-    data = [public_match/total_matches,
-            private_match/total_matches,
-            protected_match/total_matches]  # Converts to relative
-    data = [100*x for x in data]    # Converts to a percentage
+    if total_matches == 0:
+        return [0, 0, 0]
+    data = [public_match / total_matches,
+            private_match / total_matches,
+            protected_match / total_matches]  # Converts to relative
+    data = [100 * x for x in data]  # Converts to a percentage
     return data
 
 
 def comment_metric(file):
     """ Returns a list containing the number of 3 different types of java comments, single line, multi line, and doc"""
     single_comment = re.findall(r"//.*", file)
+    spell = SpellChecker()
+    single_word_list = []
+    for x in single_comment:
+        single_word_list += [i.replace("//", "") for i in x.split() if i != "" and i.isalpha()]
+
+    single_misspelled = spell.unknown(single_word_list)
     multi_comment = re.findall(r"/\*(.*?)\*/", file, re.DOTALL)
     doc_comment = re.findall(r"/\*\*(.*?)\*\*/", file, re.DOTALL)
-    multi_comment_len = len(multi_comment) - len(doc_comment) # every doc comment is a multi comment
-    data = [len(single_comment), multi_comment_len, len(doc_comment)]
+    multi_comment_len = len(multi_comment) - len(doc_comment)  # every doc comment is a multi comment
+    data = [len(single_comment), len(single_misspelled), multi_comment_len, len(doc_comment)]
     return data
 
 
@@ -147,15 +184,19 @@ def lizard_analysis(dir_path):
 
 def get_tree_col():
     """ Returns the name of columns as a list, containing attributes calculated on the parsed AST from a java file"""
-    columns = ["avg_var_length", "num_type1_var", "num_type2_var", "total_num_tokens"]
+    columns = ["total_var_count", "avg_var_length", "num_type1_var", "num_type2_var", "num_type3_var",
+               "num_type4_var", "num_var_misspell", "total_num_tokens"]
     return columns
 
 
 def calculate_tree_attributes(tree):
     """ Calculates metrics on the given tree and returns data as a list"""
-    avg_var_length, num_type1_matches, num_type2_matches = variable_name_style(tree)
+    total_var_count, avg_var_length, num_type1_matches, num_type2_matches, \
+    num_type3_matches, num_type4_matches, num_var_misspell = variable_name_style(tree)
+
     num_tokens = token_length(tree)
-    data = [avg_var_length, num_type1_matches, num_type2_matches, num_tokens]
+    data = [total_var_count, avg_var_length, num_type1_matches, num_type2_matches,
+            num_type3_matches, num_type4_matches, num_var_misspell, num_tokens]
 
     return data
 
@@ -164,7 +205,7 @@ def get_raw_col():
     """ Returns the name of columns as a list, containing attributes calculated on the raw java file"""
     llc_col = line_length_calc("", 5, True)
     accessor_col = ['rel_pub', 'rel_priv', 'rel_prot']
-    comment_col = ['sin_comm', 'multi_comm', 'doc_comm']
+    comment_col = ['sin_comm', 'sin_spell_err', 'multi_comm', 'doc_comm']
     space_col = ['sin_space', 'db_space', 'tab']
     columns = ['ternary'] + llc_col + accessor_col + comment_col + space_col
     return columns

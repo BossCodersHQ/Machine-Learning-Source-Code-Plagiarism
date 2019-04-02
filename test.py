@@ -12,46 +12,33 @@ import re
 # '{module.average_nloc:10.1f}{module.average_cyclomatic_complexity:8.1f}{module.average_token_count:11.1f}'
 from collections import defaultdict
 import operator
+from spellchecker import SpellChecker
+import re
+#%%
+print("hello")
+#%%
 
-air_file = open("jfiles/ArrayExamples.java", "r")
-air_file = "".join(air_file.readlines())
+file = open("jfiles/GenericList.java", "r")
+file = "".join(file.readlines())
+import time
 
+from tqdm import tqdm
+# x =[i for i in range(10)]
+# for i in tqdm(x):
+#     time.sleep(3)
+x = pd.read_csv("dataframes/attribute_df_soco_a1.csv", header=0)
+# type1 = "^[_a-z0-9]+"
+# type2 = "^[a-z0-9]+(?:[A-Z]+[a-z0-9]*)+"
+# type3 = "^[_A-Z0-9]+"
+#
+# word = "test_variable2_vaeg"
+# word2 = "stringCoundtGhana"
+# word3 = "CONSTANT2_VAR23FAR"
+#
+# new_word = re.split(r'[^a-zA-Z]', word)
+# new_word2 = re.split(r'([A-Z]?[a-z]*)', word2)
+# new_word3 = re.split(r'[^A-Z]', word3)
 
-# file = [s.strip() for s in file.splitlines()]
-
-
-def accessor_metrics(file):
-    """ Returns a list containing the relative frequency of 3 java access levels, public, private, protected"""
-    public_match = len(re.findall(r"public", file))
-    private_match = len(re.findall(r"private", file))
-    protected_match = len(re.findall(r"protected", file))
-    total_matches = public_match + private_match + protected_match
-    data = [public_match/total_matches,
-            private_match/total_matches,
-            protected_match/total_matches]  # Converts to relative
-    data = [100*x for x in data]    # Converts to a percentage
-    return data
-
-
-def comment_metric(file):
-    """ Returns a list containing the number of 3 different types of java comments, single line, multi line, and doc"""
-    single_comment = re.findall(r"//.*", file)
-    multi_comment = re.findall(r"/\*(.*?)\*/", file, re.DOTALL)
-    doc_comment = re.findall(r"/\*\*(.*?)\*\*/", file, re.DOTALL)
-    multi_comment_len = len(multi_comment) - len(doc_comment) # every doc comment is a multi comment
-    data = [len(single_comment), multi_comment_len, len(doc_comment)]
-    return data
-
-
-def space_metric(file):
-    """ Returns a list containing the number of single and double spaces, as well as the number of tab spaces"""
-    space = re.findall(r" ", file)
-    db_space = re.findall(r"  ", file)
-    tab_space = re.findall("\t", file)
-    data = [len(space), len(db_space), len(tab_space)]
-    return data
+# new_word = [i for i in new_word if i != '']
 
 
-a = accessor_metrics(air_file)
-d = comment_metric(air_file)
-y = space_metric(air_file)

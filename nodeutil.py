@@ -15,6 +15,11 @@ def convert_to_list(tree):
     return treelist
 
 
+def unmark_tokens(token_list):
+    for x in token_list:
+        x.marked = False
+
+
 def hash_token_list(token_list):
     total = 0
     for token in token_list:
