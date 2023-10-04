@@ -7,9 +7,10 @@ readme = "README.md"
 packages = [{include = "machine_learning_source_code_plagiarism"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.13"
 six = "^1.16.0"
 javalang = "^0.13.0"
+pandas = "^2.1.1"
 
 
 [build-system]
