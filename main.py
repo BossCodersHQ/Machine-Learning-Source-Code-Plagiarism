@@ -32,7 +32,6 @@ def main():
     files = load_files(java_files)
     
     
-
     #     tokenaddress = "tokenFiles/"+str(filename) + ".txt"
     #     tokenfile = open(tokenaddress, "w")
     #
@@ -135,4 +134,3 @@ def load_files(files: List[str]) -> dict:
 
 if __name__ == "__main__":
     main()
-
