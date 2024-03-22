@@ -10,6 +10,7 @@ import attributes
 import constants
 import math
 from results import Result
+import config
 from collections import defaultdict
 
 from sklearn.ensemble import RandomForestClassifier
@@ -123,9 +124,8 @@ def main(source_dir, output_dir, outbox):
     score_map = {}  # Map used to store the scores of each pair of files
     distro_map = defaultdict(int)   # Map used to store the distribution of scores
 
-    # Loading Random Forest model-----------------
-    with open("random_forest_model.pkl", 'rb') as file:
-        rf_regressor = pickle.load(file)
+    # Load Random Forest Model
+    rf_regressor = pickle.load(open(config.get_rf_model_path(), 'rb'))
 
     test_df = create_df(lizard_data, lizard_col, file_data, file_columns, outbox)
     test_df = test_df.fillna(-1)

@@ -5,4 +5,4 @@ dist
 /env
 /.eggs
 jfiles*/
-*.pkl
+data/*
