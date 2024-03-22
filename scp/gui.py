@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import filedialog, Menu, font, messagebox, scrolledtext
 import tkinter.ttk as ttk
-from GST import main as gst
-from quickGST import main as quick_gst
-from machine_learning import main as ml
+from scp.gst.GST import main as gst
+from scp.gst.quickGST import main as quick_gst
+from scp.machine_learning import main as ml
 import threading
 import util
 

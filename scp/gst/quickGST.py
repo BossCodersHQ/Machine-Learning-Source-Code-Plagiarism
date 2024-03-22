@@ -8,37 +8,17 @@ import itertools
 import javalang
 
 import copy
-import nodeutil     # contains util methods
+import nodeutil  # contains util methods
 import constants
 import util
 import sys
 from results import Result
 
 
-# # Calculates similarity score for 2 ast's based on the matches
-# def calculateScore(matchlist, treelistA, treelistB):
-#     lengthA = len(treelistA)
-#     lengthB = len(treelistB)
-#     count = 0
-#     for match in matchlist:
-#         for token in match:
-#             count += 1
-#     score = (2 * count) / (lengthA + lengthB)
-#     return score
-
-def create_hashtable(token_list):
-    hmap = defaultdict(list)
-    for index in range(len(token_list) - constants.MIN_MATCH_LENGTH):
-        temp = token_list[index:index+constants.MIN_MATCH_LENGTH]
-        key = nodeutil.hash_token_list(temp)
-        hmap[key].append((temp, index))
-    return hmap
 
 
-def quick_gst(filename_1, filename_2, hash_map, tree_map):
-    # for x in hash_map[filename_1].items():
-    #     print(x)
 
+def quick_gst(filename_1:str, filename_2:str, hash_map:dict, tree_map:dict) -> int:
     # Makes sure map_1 is the smallest map as this is the map which has to be traveresed fully.
     # Map_2 only has to be accessed through a hash map (access time of O(1))
     if len(tree_map[filename_1]) > len(tree_map[filename_2]):
@@ -63,8 +43,6 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
         matches = []
         # c = 0
         for key in map_1:
-            # c+=1
-            # print("On key " +str(c) + " out of " + str(len(map_1)))
             if len(map_2[key]) == 0:
                 continue
             for map_1_val, index_1 in map_1[key]:
@@ -78,8 +56,12 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
                         continue
 
                     end_flag = False
-                    extend_flag = False                 # When true indicates looking for a larger max match
-                    match_list = []  # Stores a list of maximal matches for each iteration
+                    extend_flag = (
+                        False  # When true indicates looking for a larger max match
+                    )
+                    match_list = (
+                        []
+                    )  # Stores a list of maximal matches for each iteration
                     pointer_1 = index_1 + max_match - 1
                     pointer_2 = index_2 + max_match - 1
 
@@ -89,8 +71,11 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
                         # print(str(index_1) + " " + str(index_2))
                         if pointer_1 >= len(tokens_1) or pointer_2 >= len(tokens_2):
                             end_flag = True
-                            # print("changing " + str(pointer_1) + " " + str(pointer_2))
-                        if not end_flag and tokens_1[pointer_1].marked and tokens_2[pointer_2].marked:
+                        if (
+                            not end_flag
+                            and tokens_1[pointer_1].marked
+                            and tokens_2[pointer_2].marked
+                        ):
                             end_flag = True
 
                         if not end_flag and tokens_1[pointer_1] == tokens_2[pointer_2]:
@@ -111,39 +96,36 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
                                     pointer_1 = index_1 + max_match + 1
                                     pointer_2 = index_2 + max_match + 1
 
-                                    if pointer_1 >= len(tokens_1)-1 or pointer_2 >= len(tokens_2)-1:
-                                        end_flag = True     # pointer is at the last index in list at this point
-                                    # print(str(pointer_1) + " " + str(len(tokens_1)) + " " + str(pointer_2) )
+                                    if (
+                                        pointer_1 >= len(tokens_1) - 1
+                                        or pointer_2 >= len(tokens_2) - 1
+                                    ):
+                                        end_flag = True  # pointer is at the last index in list at this point
                                     # Match is longer than the previous max match
-                                    if not end_flag and tokens_1[pointer_1] == tokens_2[pointer_2]:
-                                        if tokens_1[pointer_1].marked or tokens_2[pointer_2].marked:
-                                            # match = (index_1, pointer_1-1, index_2, pointer_2-1)
-                                            # match_list.append(match)
+                                    if (
+                                        not end_flag
+                                        and tokens_1[pointer_1] == tokens_2[pointer_2]
+                                    ):
+                                        if (
+                                            tokens_1[pointer_1].marked
+                                            or tokens_2[pointer_2].marked
+                                        ):
                                             end_flag = True
                                         else:
                                             # If there is definatley a match longer than the current maximal match then
                                             # the match_list array is cleared to accomodate a new set of longer matches
-                                            # print("clearing match_list\n\n\n")
                                             match_list = []
                                     # Match is the same length as the current max match
                                     else:
-                                        # if not tokens_1[pointer_1].marked and not tokens_2[pointer_2].marked:
-                                        #     match = (index_1, pointer_1-1, index_2, pointer_2-1)
-                                        #     match_list.append(match)
                                         end_flag = True
                         else:
                             end_flag = True
 
                             if extend_flag:
-                                # print("Ending")
-                                # print("adding to match")
-                                # print(tokens_1[index_1:pointer_1-1])
-                                # print(tokens_2[index_2:pointer_2-1])
-                                # match = ( tokens_1[index_1:pointer_1-1], tokens_2[index_2:pointer_2-1])
-                                match = (index_1, pointer_1-1, index_2, pointer_2-1)
+                                match = (index_1, pointer_1 - 1, index_2, pointer_2 - 1)
                                 match_list.append(match)
                                 matches = match_list
-                                max_match = pointer_1-1 - index_1 + 1
+                                max_match = pointer_1 - 1 - index_1 + 1
 
         for match in matches:
             start_1, end_1, start_2, end_2 = match
@@ -151,12 +133,14 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
             # print("marking token")
             line_flag = True
 
-            lines_1 = (util.get_node_line(tokens_1, start_1, end_1),
-                       util.get_node_line(tokens_1, end_1, start_1))
-            lines_2 = (util.get_node_line(tokens_2, start_2, end_2),
-                       util.get_node_line(tokens_2, end_2, start_2))
-                # lines_1 = (tokens_1[start_1+i].line, tokens_2[end_1+i].line)
-                # lines_2 = (tokens_2[start_2].line, tokens_2[start_2].line)
+            lines_1 = (
+                util.get_node_line(tokens_1, start_1, end_1),
+                util.get_node_line(tokens_1, end_1, start_1),
+            )
+            lines_2 = (
+                util.get_node_line(tokens_2, start_2, end_2),
+                util.get_node_line(tokens_2, end_2, start_2),
+            )
             for i in range(match_length):
                 tokens_1[start_1 + i].marked = True
                 tokens_2[start_2 + i].marked = True
@@ -176,27 +160,21 @@ def quick_gst(filename_1, filename_2, hash_map, tree_map):
     for match in tiles:
         count += match[0][1] - match[0][0] + 1
     score = (2 * count) / (len_1 + len_2)
-    # print(tiles)
 
     nodeutil.unmark_tokens(tokens_1)
     nodeutil.unmark_tokens(tokens_2)
 
     return score, tiles
 
-# if __name__ == '__main__':
-def main(source_dir, output_dir, outbox):
 
-    # source_dir = "jfiles2/"
-    # output_dir = None
-    # outbox = None
-    # output_dir = os.path.dirname(os.path.realpath(__file__))
-    # outbox = None
-    # currDirectory = constants.SOCO_TRAIN
+def main(source_dir, output_dir, outbox):
 
     start = time.time()  # #start recording how long program takes
     try:
         # Reading all files in the source directory
-        javadir = os.listdir(source_dir)  # directory where all java files will be stored
+        javadir = os.listdir(
+            source_dir
+        )  # directory where all java files will be stored
     except FileNotFoundError as inst:
         util.print_tk(outbox, "Incorrect Directory Entered\n")
         # exit()
@@ -208,12 +186,14 @@ def main(source_dir, output_dir, outbox):
     file_map = {}
     error_msgs = {}
     faulty_files = []
-    tree_map = {}  # Stores all trees created from the all the files in a separate dictionary
+    tree_map = (
+        {}
+    )  # Stores all trees created from the all the files in a separate dictionary
     hash_map = {}
     util.print_tk(outbox, "Setting up hash table of files...\n")
 
     for filename in javadir:
-        if filename[-5:] != ".java":    # Ensures that the current file is a java file
+        if filename[-5:] != ".java":  # Ensures that the current file is a java file
             continue
 
         if source_dir[-1] != "/":
@@ -223,13 +203,14 @@ def main(source_dir, output_dir, outbox):
 
         try:
             file = open(address, "r")
-            # files[str(filename)] = file
 
             text = "".join(file.readlines())
             file_map[filename] = text
 
             tree = javalang.parse.parse(text)
-            tokens = nodeutil.convert_to_list(tree)     # Creates a list of tokens from the tree
+            tokens = nodeutil.convert_to_list(
+                tree
+            )  # Creates a list of tokens from the tree
 
             tree_map[filename] = tokens
             hash_map[filename] = create_hashtable(tokens)
@@ -248,36 +229,33 @@ def main(source_dir, output_dir, outbox):
         except Exception as inst:
             print(filename, type(inst), inst)
             continue
-        # except Exception as inst:
-        #     error_msgs[filename] = str(inst)
+
     #  2 loops used to go through all pairings of files and perform a structure based method on all of then_statement
     #  The scores are stored in the score map
-    score_map = {}                  # Map used to store the scores of each pair of files
-    distro_map = defaultdict(int)   # Map used to store the distribution of scores
+    score_map = {}  # Map used to store the scores of each pair of files
+    distro_map = defaultdict(int)  # Map used to store the distribution of scores
     tile_map = {}
 
     for filename_1, filename_2 in itertools.combinations(tree_map, 2):
-        # the next section ensures that the key for 2 trees in the score map will be the same no matter
-        # which tree is tree_1 / tree_2
+        # Ensure the key for 2 trees in the score map will be the same no matter
 
         if util.STOPFLAG:
-            break      # Used to exit function
+            break  # Used to exit function
 
         if filename_1 <= filename_2:
             key = (filename_1, filename_2)
         else:
             key = (filename_2, filename_1)
 
-        # tree_1 = tree_map[filename_1]
-        # tree_2 = tree_map[filename_2]
-        #
-        # score = greedy_tiling(tree_1, tree_2)
         score, tiles = quick_gst(filename_1, filename_2, hash_map, tree_map)
         score = score * 100
 
-        str_score = '%.2f' % score  # rounds score too 2 dp to display
+        str_score = "%.2f" % score  # rounds score too 2 dp to display
 
-        util.print_tk(outbox, "Compared " + filename_1 + "-" + filename_2 + ": " + str_score + "%\n")
+        util.print_tk(
+            outbox,
+            "Compared " + filename_1 + "-" + filename_2 + ": " + str_score + "%\n",
+        )
         score_map[key] = score
 
         if score > constants.SIMILARITY_THRESHOLD:
@@ -306,12 +284,26 @@ def main(source_dir, output_dir, outbox):
     will not affect the score."""
 
     if output_dir is not None:
-        res = Result(files, message, output_dir, sorted_scores, sorted_distro, "quick_gst", file_map, tile_map)
+        res = Result(
+            files,
+            message,
+            output_dir,
+            sorted_scores,
+            sorted_distro,
+            "quick_gst",
+            file_map,
+            tile_map,
+        )
         res.print_html()
 
     # h = res.get_hm()
 
 
 
-
-
+def create_hashtable(token_list):
+    hmap = defaultdict(list)
+    for index in range(len(token_list) - constants.MIN_MATCH_LENGTH):
+        temp = token_list[index : index + constants.MIN_MATCH_LENGTH]
+        key = nodeutil.hash_token_list(temp)
+        hmap[key].append((temp, index))
+    return hmap

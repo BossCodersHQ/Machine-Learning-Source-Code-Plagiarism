@@ -75,12 +75,7 @@ def gst(tree_a, tree_b):
     return score
 
 def main(source_dir, output_dir, outbox):
-    start = time.time()  # #start recording how long program takes
-
-    # curr_directory = "jfiles2/"
-    # currDirectory = constants.SOCO_TRAIN
-
-
+    start = time.time()
     try:
         javadir = os.listdir(source_dir)  # directory where all java files will be stored
     except FileNotFoundError as inst:
