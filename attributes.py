@@ -210,7 +210,6 @@ def get_raw_col():
     columns = ['ternary'] + llc_col + accessor_col + comment_col + space_col
     return columns
 
-
 def calculate_raw_attributes(file):
     """ Calculates metrics on the given file and returns data as a list"""
     tern_data = ternary_op(file)

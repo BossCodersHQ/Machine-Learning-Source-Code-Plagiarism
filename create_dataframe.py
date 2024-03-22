@@ -35,97 +35,97 @@ df_name = "soco_a1"
 
 javadir = os.listdir(curr_directory)  # directory where all java files will be stored
 num_files = len(javadir)
+
+
+# files = {}      # Stores all file names
+files = []  # Stores al file names without storing files
+treeMap = {}  # Stores all trees created from the all the files in a separate dictionary:
+lizard_data, lizard_col = attributes.lizard_analysis(curr_directory)
+file_data = []
+error_msgs = {}
+faulty_files = []
+file_columns = ["filename"] + attributes.get_raw_col() + attributes.get_tree_col()
+
+# progress_count = 0
+# ten_percent = int(num_files / 10)
+# iteration = 1
+log = open("logs/log.txt", "w+")
+# Loops through all files in the given javadir directory
+# Each file opened then raw attributes calculated first. THis is done to ensure that raw attributes are calculated for
+# every file. Next tree attributes are calculated
+for filename in tqdm(javadir):
+    address = curr_directory + str(filename)
+    try:
+        file = open(address, "r")
+        # files[str(filename)] = file
+
+        temp = [curr_directory + filename]
+        text = "".join(file.readlines())
+
+        # progress_count += 1
+        # if progress_count >= ten_percent:
+        #
+        #     progress_count = 0
+        #     print(iteration*10, "  more completed")
+        #     iteration += 1
+
+        data_raw = attributes.calculate_raw_attributes(text)
+
+        # Done afterwards so that the raw attributes can be calculated even if the code can't compile
+        tree = javalang.parse.parse(text)
+        data_tree = attributes.calculate_tree_attributes(tree)
+
+        temp = temp + data_raw + data_tree
+        file_data.append(temp)
+        files.append(str(filename))
+        # treeMap[filename] = tree
+    except FileNotFoundError:
+        print("File " + str(filename) + " was not found")
+    except javalang.parser.JavaSyntaxError as inst:
+        print(str(filename) + " couldn't compile")
+        faulty_files.append(filename)
+        error_msgs[filename] = 1
+    except javalang.tokenizer.LexerError as inst:
+        error_msgs[filename] = 2
+        continue
+    except UnicodeDecodeError as inst:
+        error_msgs[filename] = 3
+        continue
+    except AttributeError as inst:
+        error_msgs[filename] = 4
+        continue
+    except Exception as inst:
+        print(filename, type(inst), inst)
+        error_msgs[filename] = 5
+
+msg = str(len(files)) + " have been scanned."
+print(msg)
 #
-#
-# # files = {}      # Stores all file names
-# files = []  # Stores al file names without storing files
-# treeMap = {}  # Stores all trees created from the all the files in a separate dictionary:
-# lizard_data, lizard_col = attributes.lizard_analysis(curr_directory)
-# file_data = []
-# error_msgs = {}
-# faulty_files = []
-# file_columns = ["filename"] + attributes.get_raw_col() + attributes.get_tree_col()
-#
-# # progress_count = 0
-# # ten_percent = int(num_files / 10)
-# # iteration = 1
-# log = open("logs/log.txt", "w+")
-# # Loops through all files in the given javadir directory
-# # Each file opened then raw attributes calculated first. THis is done to ensure that raw attributes are calculated for
-# # every file. Next tree attributes are calculated
-# for filename in tqdm(javadir):
-#     address = curr_directory + str(filename)
-#     try:
-#         file = open(address, "r")
-#         # files[str(filename)] = file
-#
-#         temp = [curr_directory + filename]
-#         text = "".join(file.readlines())
-#
-#         # progress_count += 1
-#         # if progress_count >= ten_percent:
-#         #
-#         #     progress_count = 0
-#         #     print(iteration*10, "  more completed")
-#         #     iteration += 1
-#
-#         data_raw = attributes.calculate_raw_attributes(text)
-#
-#         # Done afterwards so that the raw attributes can be calculated even if the code can't compile
-#         tree = javalang.parse.parse(text)
-#         data_tree = attributes.calculate_tree_attributes(tree)
-#
-#         temp = temp + data_raw + data_tree
-#         file_data.append(temp)
-#         files.append(str(filename))
-#         # treeMap[filename] = tree
-#     except FileNotFoundError:
-#         print("File " + str(filename) + " was not found")
-#     except javalang.parser.JavaSyntaxError as inst:
-#         print(str(filename) + " couldn't compile")
-#         faulty_files.append(filename)
-#         error_msgs[filename] = 1
-#     except javalang.tokenizer.LexerError as inst:
-#         error_msgs[filename] = 2
-#         continue
-#     except UnicodeDecodeError as inst:
-#         error_msgs[filename] = 3
-#         continue
-#     except AttributeError as inst:
-#         error_msgs[filename] = 4
-#         continue
-#     except Exception as inst:
-#         print(filename, type(inst), inst)
-#         error_msgs[filename] = 5
-#
-# msg = str(len(files)) + " have been scanned."
-# print(msg)
-# #
-# # # for name in faulty_files:
-# # #     msg = name + " couldn't compile"
-# # #     log.write(msg)
-# # # for name, msg in error_msgs.items():
-# # #     msg = name + " had the error " + str(msg)
-# # #     log.write(msg)
-# # --------------------------------------------------#
-# # ----------------- Working with Data Frames --------#
-#
-# print("Creating Data frames")
-# lizard_df = pd.DataFrame(lizard_data, columns=lizard_col)
-# lizard_df.set_index("filename", inplace=True)
-#
-# raw_tree_df = pd.DataFrame(file_data, columns=file_columns)
-# raw_tree_df.set_index("filename", inplace=True)
-#
-# attribute_df = pd.concat([lizard_df, raw_tree_df], axis=1, sort=True).astype(float)
-# attribute_df.reset_index(inplace=True)  # gets rid of filename index
-# attribute_df.rename(columns={"index": "filename"}, inplace=True)
-# # Drops Nan values
-# # Uncomment # @then gets rid of anomalies by classifying everything greater than 3 standard deviations away from the
-# # mean as an anomaly
-# attribute_df.dropna(inplace=True)
-# # attribute_df = attribute_df[(np.abs(stats.zscore(attribute_df.iloc[:, 1:])) < 3).all(axis=1)]
-# attribute_df.drop("num_type4_var", axis=1, inplace=True)
+# # for name in faulty_files:
+# #     msg = name + " couldn't compile"
+# #     log.write(msg)
+# # for name, msg in error_msgs.items():
+# #     msg = name + " had the error " + str(msg)
+# #     log.write(msg)
+# --------------------------------------------------#
+# ----------------- Working with Data Frames --------#
+
+print("Creating Data frames")
+lizard_df = pd.DataFrame(lizard_data, columns=lizard_col)
+lizard_df.set_index("filename", inplace=True)
+
+raw_tree_df = pd.DataFrame(file_data, columns=file_columns)
+raw_tree_df.set_index("filename", inplace=True)
+
+attribute_df = pd.concat([lizard_df, raw_tree_df], axis=1, sort=True).astype(float)
+attribute_df.reset_index(inplace=True)  # gets rid of filename index
+attribute_df.rename(columns={"index": "filename"}, inplace=True)
+# Drops Nan values
+# Uncomment # @then gets rid of anomalies by classifying everything greater than 3 standard deviations away from the
+# mean as an anomaly
+attribute_df.dropna(inplace=True)
+# attribute_df = attribute_df[(np.abs(stats.zscore(attribute_df.iloc[:, 1:])) < 3).all(axis=1)]
+attribute_df.drop("num_type4_var", axis=1, inplace=True)
 
 #-------------------------------------------------------#
 

@@ -47,9 +47,8 @@ class Main(tk.Frame):
         self.source_files_entry().grid(row=2, columnspan=2, pady=5)
         self.results_files_entry().grid(row=3, columnspan=2, pady=5)
         self.method_entry().grid(row=4, columnspan=2, pady=5)
-        attributes_entry = self.attributes_entry()
-        attributes_entry.grid(row=5, columnspan=2, pady=5)
-        attributes_entry.grid_remove()
+        self.attributes_entry().grid(row=5, columnspan=2, pady=5)
+
         log_box, self.output_box = self.log_box()
         log_box.grid(row=6, column=0, ipady=10, pady=10, rowspan=3)
         self.clear_button().grid(row=6, column=1, sticky="S")
@@ -104,23 +103,23 @@ class Main(tk.Frame):
         row = tk.Frame(self.background)
 
         label = tk.Label(row, text="Enter the Analysis method:", font=self.fonts.normal)
-        radio1 = tk.Radiobutton(row, text="ML(quick)", value=1, variable=self.method_selection)
-        radio2 = tk.Radiobutton(row, text="Improved GST + AST(quick)", value=2, variable=self.method_selection)
-        radio3 = tk.Radiobutton(row, text="Normal GST(slow)", value=3, variable=self.method_selection)
+        radio1 = tk.Radiobutton(row, text="GST+AC+ML(slow+accurate)", value=1, variable=self.method_selection)
+        radio2 = tk.Radiobutton(row, text="ML(quick)", value=2, variable=self.method_selection)
+        # radio3 = tk.Radiobutton(row, text="Normal GST(slow)", value=3, variable=self.method_selection)
 
         label.grid(row=0, column=0, rowspan=2)
         radio1.grid(row=0, column=1, sticky="W")
-        radio2.grid(row=0, column=2, sticky="W")
-        radio3.grid(row=1, column=1, columnspan=2, sticky="W")
+        radio2.grid(row=1, column=1, sticky="W")
+        # radio3.grid(row=1, column=1, columnspan=2, sticky="W")
 
         return row
 
     def attributes_entry(self):
         row = tk.Frame(self.background)
 
-        label = tk.Label(row, text="Enter the number of attributes:", font=self.fonts.normal)
+        label = tk.Label(row, text="Enter the sensitivity:", font=self.fonts.normal)
         combo = ttk.Combobox(row)
-        combo['values'] = (10, 20, 30)
+        combo['values'] = ("High", 20, 30)
         combo.current(0)
         self.combo = combo  # allows combo boc to be accessed from outside this method
 
@@ -173,13 +172,13 @@ class Main(tk.Frame):
             messagebox.showerror("Error", "No Method has been chosen")
         else:
             if method_choice == 3:
-                self.output_box.insert(tk.INSERT, "Greedy String Tiling(Slowest):\n")
+                self.output_box.insert(tk.INSERT, "GST + ML + AST(Slow-Accurate):\n")
                 thread = threading.Thread(target=gst, args=(source_directory, results_directory, self.output_box))
                 thread.daemon = True  # Daemonize thread
                 thread.start()
 
             if method_choice == 2:
-                self.output_box.insert(tk.INSERT, "Improved Greedy String Tiling(Quick):\n")
+                self.output_box.insert(tk.INSERT, "ML(Quick-less accurate):\n")
                 thread = threading.Thread(target=quick_gst, args=(source_directory, results_directory, self.output_box))
                 thread.daemon = True  # Daemonize thread
                 thread.start()

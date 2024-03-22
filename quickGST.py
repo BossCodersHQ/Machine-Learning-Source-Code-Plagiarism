@@ -195,6 +195,7 @@ def main(source_dir, output_dir, outbox):
 
     start = time.time()  # #start recording how long program takes
     try:
+        # Reading all files in the source directory
         javadir = os.listdir(source_dir)  # directory where all java files will be stored
     except FileNotFoundError as inst:
         util.print_tk(outbox, "Incorrect Directory Entered\n")

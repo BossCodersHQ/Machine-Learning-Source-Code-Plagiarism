@@ -7,7 +7,7 @@ def typeEquals(node1, node2):
         return False
     return True
 
-
+# Converts an AST to a list of NodeContainer objects
 def convert_to_list(tree):
     treelist = []
     for path, node in tree:

@@ -4,8 +4,9 @@ import constants
 from shutil import copyfile
 from collections import defaultdict
 
+#
 
-class Result():
+class Result:
     colours = ["red", "pink", "purple", "deep-purple ", "indigo", "blue", "light_blue",
                "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange",
                "deep-orange", "brown", "grey", "blue-grey"]
