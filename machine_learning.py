@@ -45,8 +45,6 @@ def create_df(lizard_data, lizard_col, file_data, file_columns, outbox):
             break      # Used to exit function
         filename_1 = file1_att[0]
         filename_2 = file2_att[0]
-        # sys.stdout.write("\033[K")
-        # util.print_tk(outbox, " Computin file 1 : " + str(filename_1) + "-  file 2: " + str(filename_2))
         # Sets an order to the filenames to make it easier to access specific rows later from the dataframe
         filenames = [filename_1, filename_2] if filename_1 < filename_2 else [filename_2, filename_1]
         data = []
@@ -55,7 +53,6 @@ def create_df(lizard_data, lizard_col, file_data, file_columns, outbox):
                 data.append(abs(i - j))
             else:
                 data.append(np.nan)
-        # data = [abs(i-j) for i, j in zip(file1_att[1:], file2_att[1:])]
         final_df_list.append(filenames + data)
 
     # Adds column headings to rows and creates a final dataframe
@@ -65,14 +62,10 @@ def create_df(lizard_data, lizard_col, file_data, file_columns, outbox):
     # final_df = final_df.reindex(sorted(final_df.columns), axis=1)   # reorders columns based on alphabetic order
     return final_df
 
-# if __name__ == '__main__':
+
 def main(source_dir, output_dir, outbox):
 
     source_dir = source_dir.split("/")[-1] + "/"
-    # source_dir = "jfiles/"
-    # output_dir = os.path.dirname(os.path.realpath(__file__))
-    # outbox = None
-    # currDirectory = constants.SOCO_TRAIN
     print(source_dir)
     start = time.time()  # #start recording how long program takes
     try:
@@ -118,8 +111,6 @@ def main(source_dir, output_dir, outbox):
             util.print_tk(outbox, "File " + str(filename) + " was not found\n")
         except javalang.parser.JavaSyntaxError as inst:
             util.print_tk(outbox, str(filename) + " couldn't compile\n")
-        # except Exception as inst:
-        #     error_msgs[filename] = str(inst)
 
     score_map = {}  # Map used to store the scores of each pair of files
     distro_map = defaultdict(int)   # Map used to store the distribution of scores

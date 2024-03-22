@@ -14,21 +14,9 @@ import csv
 
 constants.MIN_LINE_MATCHES = 4  # The number of different lines that a match has to be found on
 
-# # Calculates similarity score for 2 ast's based on the matches
-# def calculateScore(matchlist, treelistA, treelistB):
-#     lengthA = len(treelistA)
-#     lengthB = len(treelistB)
-#     count = 0
-#     for match in matchlist:
-#         for token in match:
-#             count += 1
-#     score = (2 * count) / (lengthA + lengthB)
-#     return score
 
-
-#   returns a score given 2 files
 def gst(tree_a, tree_b):
-
+    """ Returns a score given 2 files"""
     treelist_a = nodeutil.convert_to_list(tree_a)
     treelist_b = nodeutil.convert_to_list(tree_b)
     tiles = []
@@ -84,13 +72,8 @@ def gst(tree_a, tree_b):
         for token in match:
             count += 1
     score = (2 * count) / (lengthA + lengthB)
-    # print("Printing length of tiles")
-    # for x in tiles:
-    #     print(len(x))
     return score
 
-
-# if __name__ == '__main__':
 def main(source_dir, output_dir, outbox):
     start = time.time()  # #start recording how long program takes
 
