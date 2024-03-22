@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            div.jack{
+                counter-reset: line;
+                overflow-x:auto;
+                overflow-y: auto;
+                scrollbar-face-color:dimgrey;
+                white-space: nowrap;
+                height:70%;
+                margin:5px;
+            }
+            h2{
+                margin-top:0;
+            }
+            code{
+                counter-increment: line;
+                display: block;
+                font-size: 12px;
+            }
+            code:before{
+                content: counter(line);
+                color: black;
+                -webkit-user-select: none;
+            }
+        </style>
+    </head>
+
+    <body class="grey lighten-2">
+        <div class="" style="padding-left:2%;padding-right: 2%">
+            <div class="row">
+                <a class="waves-effect waves-light btn purple lighten-2" href="../<!--method-->_results.html" style="margin:15px">Home</a>
+                <h5 class="center-align">Match for <!--filename1--> and <!--filename2--></h5>
+                <h2 class="center-align"><b><!--score-->%</b></h2>
+
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <div class="divider"></div>
+                    <h2 class="center-align"><!--filename1--></h2>
+                    <div class="divider"></div>
+                    <div class="row grey lighten-1 jack z-depth-2">
+                            <!--file1code-->
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="divider"></div>
+                    <h2 class="center-align"><!--filename2--></h2>
+                    <div class="divider"></div>
+                    <div class="row grey lighten-1 jack z-depth-2">
+                            <!--file2code-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="responsive-table highlight">
+                    <thead>
+                      <tr>
+                          <th>File 1: <!--filename1--></th>
+                          <th>File 2: <!--filename2--></th>
+                          <th>Tokens</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <!--bottomtable-->
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+    </body>
+</html>

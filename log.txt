@@ -1,0 +1,15 @@
+
+=========================================================================================
+!!!! Warnings (cyclomatic_complexity > 15 or length > 1000 or parameter_count > 100) !!!!
+================================================
+  NLOC    CCN   token  PARAM  length  location  
+------------------------------------------------
+      86     18    651      1     112 BruteForce::main@12-123@jfiles/000.java
+     108     16    653      1     131 WatchDog::compVersions@224-354@jfiles/005.java
+     108     16    653      1     131 WatchDog::compVersions@224-354@jfiles/006.java
+     149     20    890      1     189 WatchDog::main@11-199@jfiles/009.java
+     347     58   3121      1     461 BruteForce::main@22-482@jfiles/011.java
+     111     20    666      1     159 WatchDog::main@17-175@jfiles/012.java
+     127     19    737      1     147 WatchDogTask::performTask@78-224@jfiles/020.java
+     121     33   1019      1     177 EightQueens::main@7-183@jfiles/EightQueens.java
+EightQueens.java couldn't compile

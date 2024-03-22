@@ -1,3 +1,4 @@
+from typing import List
 import javalang
 import os
 import shutil
@@ -9,32 +10,28 @@ import time
 import nodeutil
 from greedystring import greedyTiling
 import attributes
-import constants
+import config
+from pathlib import Path
 
 import pandas as pd
 import numpy as np
+import logging
 
-start = time.time()
+LOGGER = logging.getLogger(__name__)
 
 
-curr_dir = constants.SOCO_TRAIN
-javadir = os.listdir(curr_dir)  # directory where all java files will be stored
 
 def main():
-    files = {}
-    for filename in javadir:
-        address = curr_dir + str(filename)
-        try:
-            file = open(address, "r")
-        except FileNotFoundError:
-            print("File " + str(filename) + " was not found")
-        except:
-            print(sys.exc_info()[0])
+    start = time.time()
+    config.initialise_logging()
+    java_files = get_training_data(config.get_training_directory())
 
-        files[str(filename)] = file
+    if not java_files:
+        return
 
-    print(len(files))
-
+    files = load_files(java_files)
+    
+    
     #     tokenaddress = "tokenFiles/"+str(filename) + ".txt"
     #     tokenfile = open(tokenaddress, "w")
     #
@@ -111,8 +108,29 @@ def main():
     end = time.time()  # stop recording time
     print("Execution time: " + str(end - start) + " seconds")
 
+def get_training_data(directory: str) -> List[str]:
+    """Get list of training data files from directory"""
+    dir_path = Path(directory)
+    try:
+        dir_path.exists()
+        return os.listdir(directory)
+    except Exception as e:
+        LOGGER.error(f"Unable to get training data Error: {e}")
+        raise e
+    
+def load_files(files: List[str]) -> dict:
+    """Load files into memory"""
+    files = {}
+    for path in files:
+        try:
+            file = open(path, "r")
+        except FileNotFoundError as e:
+            print(f"File [{path}] not found: [{e}]")
+        except Exception as e:
+            raise e
+        files[path] = file
 
+    LOGGER.info(f"Found [{len(files)}] files")
 
 if __name__ == "__main__":
     main()
-
