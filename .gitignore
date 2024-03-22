@@ -4,5 +4,6 @@ dist
 /build
 /env
 /.eggs
+jfiles/
 jfiles*/
 data/*
