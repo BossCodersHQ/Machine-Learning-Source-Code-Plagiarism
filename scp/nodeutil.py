@@ -1,14 +1,15 @@
 from javalang.ast import Node
 
 
-#   tests for 2 nodes with equal types
 def typeEquals(node1, node2):
+    """Tests for 2 nodes with equal types"""
     if type(node1) is not type(node2):
         return False
     return True
 
-# Converts an AST to a list of NodeContainer objects
+
 def convert_to_list(tree):
+    """Converts an AST to a list of NodeContainer objects"""
     treelist = []
     for path, node in tree:
         treelist.append(NodeContainer(node))
@@ -34,6 +35,7 @@ def nc_equals(list_1: list, list_2: list) -> bool:
         else:
             continue
     return True
+
 
 class NodeContainer(object):
     """A generic container to hold a node from the Abstract syntax tree.
@@ -74,7 +76,15 @@ class NodeContainer(object):
 
     #   defines what should be outputted when printing thre node
     def __repr__(self):
-        string = "(" + str(self.type) + ", Line: " + str(self.line) + " col: " + str(self.column) + ")"
+        string = (
+            "("
+            + str(self.type)
+            + ", Line: "
+            + str(self.line)
+            + " col: "
+            + str(self.column)
+            + ")"
+        )
         return string
 
     def hash(self):
